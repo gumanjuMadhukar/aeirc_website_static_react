@@ -55,7 +55,7 @@ const LabSection: React.FC = () => {
             >
               <div className="course-item bg-light">
                 <div className="position-relative overflow-hidden">
-                  <img className="img-fluid" src={course.image} alt="" />
+                  <img className="img-fluid" src={course.image} alt="" style={{ height: "300px", objectFit: "cover", width: "100%" }}/>
                   <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                     <a
                       href="#"
