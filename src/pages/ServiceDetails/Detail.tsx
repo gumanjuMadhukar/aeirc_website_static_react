@@ -1,13 +1,16 @@
 // pages/ServiceDetails/Details.tsx
 import { useParams } from "react-router-dom";
-import { services } from "./serviceData";
+import { services } from "./servicesData";
 
 const Details = () => {
   const { id } = useParams();
+  console.log("URL param id:", id); // Debug log
+
   const service = services.find((s) => s.id === id);
+  console.log("Found service:", service); // Debug log
 
   if (!service) {
-    return <div className="text-center text-red-500">Service not found.</div>;
+    return <div className="text-red-500 text-center">Service not found.</div>;
   }
 
   return (

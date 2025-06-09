@@ -16,10 +16,10 @@ const ServiceSection = () => {
             <div
               key={index}
               className="col-lg-3 col-sm-6 wow fadeInUp "
-              data-wow-delay={service.delay}
+              // data-wow-delay={service.delay}
       
             >
-              <Link href={`/ServiceDetails/${service.id}`} legacyBehavior style={{ textDecoration: 'none' }}>
+              <Link key={service.id} to={`/ServiceDetails/${service.id}`}  style={{ textDecoration: 'none' }}>
                 <a >
                 <div
                   className="service-item text-center pt-3 h-[350px] flex flex-col justify-between p-4 shadow-md rounded-lg "
