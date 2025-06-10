@@ -67,27 +67,9 @@ button:focus-visible {
   height: 100%;
   object-fit: cover;
 }
-
-/* .footer-menu {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-} */
-
-/* .footer-menu a {
-  margin: 0; 
-  padding: 0;
-  text-decoration: none; 
+.carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
+    margin: 0 45px;
 }
-.footer-divider {
-  border: none;
-  border-top: 2px solid rgba(255, 255, 255, 0.2); /* subtle white line */
-  /* margin: 1rem 0;  spacing above and below */
-/* } */ 
-
-
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

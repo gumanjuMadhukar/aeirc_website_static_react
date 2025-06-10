@@ -97,7 +97,8 @@ const ContactSection: React.FC = () => {
             {contactInfo.map(({ iconClass, title, text }) => (
               <div className="d-flex align-items-center mb-3" key={title}>
                 <div
-                  className="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                  className="d-flex align-items-center justify-content-center flex-shrink-0 bg-site-primary
+"
                   style={{ width: "50px", height: "50px" }}
                 >
                   <i className={`${iconClass} text-white`}></i>

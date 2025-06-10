@@ -1,8 +1,7 @@
-import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Homepage";
 import AboutUs from "./pages/AboutUs";
-import ExamLabs from "./pages/ExamLabs";
+import OurProducts from "./pages/OurProducts";
 import OurTeam from "./pages/OurTeam";
 import TestimonialPage from "./pages/TestimonialPage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -19,6 +18,7 @@ import "./styles/style.css";
 import FooterSection from "./components/FooterSection";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "./App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -29,13 +29,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/exam" element={<ExamLabs />} />
+        <Route path="/products" element={<OurProducts />} />
         <Route path="/team" element={<OurTeam />} />
         <Route path="/Testimonial" element={<TestimonialPage />} />
         <Route path="/404" element={<NotFoundPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        {/* <Route path="/service" element={<Services />} /> */}
         <Route path="/services/:id" element={<Details />} />
+        <Route path="/ServiceDetails/:id" element={<Details />} />
 
       </Routes>
       <FooterSection />

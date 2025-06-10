@@ -1,5 +1,6 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "./carouselOverrides.css";
 import { Carousel } from "react-responsive-carousel";
 
 interface Slide {
@@ -85,7 +86,7 @@ const HomeBanner: React.FC = () => {
                 objectFit: "cover", 
                 display: "block",
                 margin: "0 auto",
-                backgroundColor: "#ffffff",
+                // backgroundColor: "#ffffff",
               }}
             />
             <div
@@ -114,7 +115,7 @@ const HomeBanner: React.FC = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "flex-start",
-                  padding: "0 6rem",
+                  padding: "0 8rem",
                   boxSizing: "border-box",
                   color: "white",
                 }}
@@ -138,7 +139,7 @@ const HomeBanner: React.FC = () => {
                       {slide.description}
                     </p>
                   )}
-                  {slide.buttonText && slide.buttonLink && (
+                  {/* {slide.buttonText && slide.buttonLink && (
                     <a
                       href={slide.buttonLink}
                       style={{
@@ -155,7 +156,7 @@ const HomeBanner: React.FC = () => {
                     >
                       {slide.buttonText}
                     </a>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

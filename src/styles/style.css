@@ -5,6 +5,15 @@
     --dark: #181d38;
 }
 
+.bg-powder-blue {
+    background-color: #b0e0e6;
+}
+.bg-site-primary {
+    --primary: #b2163d;
+}
+.text-nav{
+    color: #000000;
+}
 .fw-medium {
     font-weight: 600 !important;
 }

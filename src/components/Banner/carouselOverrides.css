@@ -1,0 +1,21 @@
+.carousel .control-arrow:before,
+.carousel.carousel-slider .control-arrow:before {
+  margin: 0 40px;
+}
+
+
+@media (max-width: 992px) {
+  .carousel .control-arrow:before,
+  .carousel.carousel-slider .control-arrow:before {
+    margin: 0 30px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .carousel .control-arrow:before,
+  .carousel.carousel-slider .control-arrow:before {
+    margin: 0 15px;
+  }
+}
+

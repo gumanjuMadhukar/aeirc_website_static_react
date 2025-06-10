@@ -64,9 +64,9 @@ const OurTeam: React.FC = () => {
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
           <h6 className="section-title bg-white text-center text-primary px-3">
-            Instructors
+            Team
           </h6>
-          <h1 className="mb-5">Expert Instructors</h1>
+          <h1 className="mb-5">Our Team</h1>
         </div>
         <div className="row g-4">
           {instructors.map((instructor, index) => (

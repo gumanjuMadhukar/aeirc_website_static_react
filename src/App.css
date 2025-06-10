@@ -4,6 +4,9 @@ body, html, #root {
   overflow-x: hidden;
   /* box-sizing: border-box; */
 }
+a {
+  text-decoration: none !important;
+}
 
 #root {
   display: flex;

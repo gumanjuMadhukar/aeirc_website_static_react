@@ -19,7 +19,7 @@ const ServiceSection = () => {
               // data-wow-delay={service.delay}
       
             >
-              <Link key={service.id} to={`/ServiceDetails/${service.id}`}  style={{ textDecoration: 'none' }}>
+              <Link to={`/ServiceDetails/${service.id}`}  style={{ textDecoration: 'none' }}>
                 <a >
                 <div
                   className="service-item text-center pt-3 h-[350px] flex flex-col justify-between p-4 shadow-md rounded-lg "

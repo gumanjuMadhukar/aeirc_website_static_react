@@ -2,7 +2,8 @@ import React from "react";
 
 const NotFoundHeader: React.FC = () => {
   return (
-    <div className="container-fluid bg-primary py-5 mb-5 page-header">
+    <div className="container-fluid bg-site-primary
+ py-5 mb-5 page-header">
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-10 text-center">

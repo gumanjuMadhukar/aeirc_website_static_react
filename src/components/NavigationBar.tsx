@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <div className="w-100 bg-primary py-3 px-4 d-flex justify-content-between align-items-center text-white">
+      <div
+        className="w-100 bg-powder-blue py-3 px-4 d-flex justify-content-between align-items-center text-nav">
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.org&su=Booking%20Request"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-decoration-none d-flex align-items-center"
+          className="text-nav text-decoration-none d-flex align-items-center"
         >
           <i className="bi bi-envelope me-2"></i>
           <small>info@aeirc.org</small>
@@ -20,7 +21,7 @@ const Navbar = () => {
             href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white"
+            className="text-nav"
           >
             <i className="bi bi-facebook"></i>
           </a>
@@ -28,7 +29,7 @@ const Navbar = () => {
             href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white"
+            className="text-nav"
           >
             <i className="bi bi-linkedin"></i>
           </a>
@@ -71,8 +72,8 @@ const Navbar = () => {
               <Link to="/about" className="nav-item nav-link">
                 About
               </Link>
-              <Link to="/exam" className="nav-item nav-link">
-                ExamLabs
+              <Link to="/products" className="nav-item nav-link">
+                Products
               </Link>
 
               <div className="nav-item dropdown">
@@ -83,18 +84,18 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Pages
+                  About 
                 </a>
                 <div className="dropdown-menu fade-down m-0">
                   <Link to="/team" className="dropdown-item">
                     Our Team
                   </Link>
-                  <Link to="/testimonial" className="dropdown-item">
-                    Testimonial
+                  <Link to="/about" className="dropdown-item">
+                    About Us
                   </Link>
-                  <Link to="/404" className="dropdown-item">
+                  {/* <Link to="/404" className="dropdown-item">
                     404 Page
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
