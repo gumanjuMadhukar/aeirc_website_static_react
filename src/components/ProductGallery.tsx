@@ -1,6 +1,4 @@
-
-
-const Categories = () => {
+const ProductGallery = () => {
   return (
     <div>
       <div className="container-xxl py-5 category">
@@ -9,7 +7,7 @@ const Categories = () => {
           <h6 className="section-title bg-white text-center text-primary px-3">
             AEIRC
           </h6>
-          <h1 className="mb-5"> Gallery</h1>
+          <h1 className="mb-5">Product Gallery</h1>
         </div>
 
         <div className="row g-3">
@@ -90,4 +88,4 @@ const Categories = () => {
   )
 }
 
-export default Categories
+export default ProductGallery

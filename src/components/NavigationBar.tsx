@@ -1,10 +1,31 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const sc = window.scrollY;
+      const header = document.getElementById("header-sroll");
+      if (header) {
+        if (sc > 100) {
+          header.classList.add("small");
+        } else {
+          header.classList.remove("small");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div>
+    <div className="nav-container" onClick={() => console.log("Div clicked!")}>
       {/* Top bar */}
-      <div className="w-100 bg-powder-blue py-3 px-4 d-flex justify-content-between align-items-center text-nav">
+      <div className="site-top-navbar w-100 bg-powder-blue py-3 px-4 d-flex justify-content-between align-items-center text-nav">
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.org&su=Booking%20Request"
           target="_blank"
@@ -35,8 +56,8 @@ const Navbar = () => {
       </div>
 
       {/* Main navbar */}
-      <div className="container px-3 m-3">
-        <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top m-0 p-0">
+      <div className="px-3 m-3 W-100 site-navbar" id="header-sroll">
+        <nav className=" navbar navbar-expand-lg bg-white navbar-light sticky-top m-0 p-0">
           <NavLink
             to="/"
             end
@@ -66,9 +87,9 @@ const Navbar = () => {
           </button>
 
           <div className="collapse navbar-collapse m-0" id="navbarCollapse">
-            <div className="navbar-nav ms-auto p-4 p-lg-0">
-              {["/", "/about", "/products", "/contact"].map((path, idx) => {
-                const label = ["Home", "About", "Products", "Contact"][idx];
+            <div className="navbar-nav ms-auto">
+              {["/", "/about","/services", "/products", "/contact"].map((path, idx) => {
+                const label = ["Home", "About","Services", "Products", "Contact"][idx];
                 return (
                   <NavLink
                     key={path}
@@ -83,7 +104,7 @@ const Navbar = () => {
                 );
               })}
 
-              <div className="nav-item dropdown">
+              {/* <div className="nav-item dropdown">
                 <NavLink
                   to="/about"
                   className={({ isActive }) =>
@@ -103,7 +124,7 @@ const Navbar = () => {
                     About Us
                   </NavLink>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </nav>

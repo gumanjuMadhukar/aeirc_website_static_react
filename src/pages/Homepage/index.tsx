@@ -8,6 +8,7 @@ import Categories from "../../components/Categories";
 import LabSection from "../../components/ProductSection";
 // import TeamSection from "../../components/TeamSection";
 import TestimonialSection from "../../components/TestimonialSection";
+import WhyUs from "../../components/WhyUs";
 // import About from "../../components/About";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
     <div>
       <HomeBanner />
       <ServiceSection />
+      <WhyUs/>
       {/* <About/> */}
       <Categories />
       <LabSection />

@@ -6,7 +6,8 @@ import OurTeam from "./pages/OurTeam";
 import TestimonialPage from "./pages/TestimonialPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ContactPage from "./pages/ContactPage";
-import Details from "./pages/ServiceDetails/Detail";
+import ServicePage from "./pages/ServicePage";
+import Details from "./pages/ServicePage/Detail";
 
 // import Navbar from "./components/navbar";
 import Navbar from "./components/NavigationBar";
@@ -30,13 +31,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/products" element={<OurProducts />} />
+        <Route path="/services" element={<ServicePage/>}/>
         <Route path="/team" element={<OurTeam />} />
         <Route path="/Testimonial" element={<TestimonialPage />} />
         <Route path="/404" element={<NotFoundPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/services/:id" element={<Details />} />
         <Route path="/ServiceDetails/:id" element={<Details />} />
-
       </Routes>
       <FooterSection />
     </BrowserRouter>

@@ -71,12 +71,12 @@ const TestimonialSection: React.FC = () => {
           {testimonials.map((item, index) => (
             <div className="px-3" key={index}>
               <div className="testimonial-item text-center">
-                <img
+                {/* <img
                   className="border rounded-circle p-2 mx-auto mb-3"
                   src={item.imgSrc}
                   alt={item.name}
                   style={{ width: "80px", height: "80px" }}
-                />
+                /> */}
                 <h5 className="mb-0">{item.name}</h5>
                 <p>{item.profession}</p>
                 <div

@@ -8,17 +8,17 @@ type ContactInfoItem = {
 
 const contactInfo: ContactInfoItem[] = [
   {
-    iconClass: "fa fa-map-marker-alt",
+    iconClass: "fas fa-map-marker-alt",
     title: "Office",
-    text: "123 Street, New York, USA",
+    text: "Babarmal, Kathmandu",
   },
   {
-    iconClass: "fa fa-phone-alt",
+    iconClass: "fas fa-phone-alt",
     title: "Mobile",
     text: "+012 345 67890",
   },
   {
-    iconClass: "fa fa-envelope-open",
+    iconClass: "fas fa-envelope-open",
     title: "Email",
     text: "info@example.com",
   },
@@ -101,10 +101,10 @@ const ContactSection: React.FC = () => {
 "
                   style={{ width: "50px", height: "50px" }}
                 >
-                  <i className={`${iconClass} text-white`}></i>
+                  <i className={`${iconClass} text-black`}></i>
                 </div>
                 <div className="ms-3">
-                  <h5 className="text-primary">{title}</h5>
+                  <h5 className="text-black">{title}</h5>
                   <p className="mb-0">{text}</p>
                 </div>
               </div>
@@ -186,7 +186,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div className="col-12">
                   <button
-                    className="btn btn-primary w-100 py-3"
+                    className="btn btn-custom  w-100 py-3"
                     type="submit"
                     disabled={isSending}
                   >

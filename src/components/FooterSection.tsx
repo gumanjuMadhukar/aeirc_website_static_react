@@ -7,14 +7,14 @@ const FooterSection: React.FC = () => {
     >
       <div className="container py-5 ">
         <div className="row g-5">
-          <div className="col-lg-3 col-md-6">
-            <h4 className="text-dark mb-3">AEIRC</h4>
+          <div className="col-lg-6 col-md-6">
             <img
-              src="/img/logo_AEIRC.png"
+              src="/img/logo.png"
               alt="aeirc_logo"
               className="img-fluid"
-              style={{ maxWidth: 200, margin: "0", display: "block" }}
+              style={{ maxWidth: 100, margin: "0", display: "block" }}
             />
+            <h3 className="text-dark mb-3">Advance Education & Innovative Research Centre Pvt. Ltd.</h3>
           </div>
           <div className="col-lg-3 col-md-6">
             <h4 className="text-dark mb-3">Quick Link</h4>
@@ -37,8 +37,7 @@ const FooterSection: React.FC = () => {
           <div className="col-lg-3 col-md-6">
             <h4 className="text-dark mb-3">Contact</h4>
             <p className="mb-2">
-              <i className="fas fa-map-marker-alt me-3"></i>123 Street, New
-              York, USA
+              <i className="fas fa-map-marker-alt me-3"></i>Babarmal, Kathmandu
             </p>
             <p className="mb-2">
               <i className="fas fa-phone-alt me-3"></i>+012 345 67890
@@ -61,7 +60,7 @@ const FooterSection: React.FC = () => {
               </a>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6">
+          {/* <div className="col-lg-4 col-md-6">
             <h4 className="text-dark mb-3">Gallery</h4>
             <div className="row g-2 pt-2">
               {[1, 2, 3, 2, 3, 1].map((img, index) => (
@@ -74,10 +73,10 @@ const FooterSection: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="container">
+      {/* <div className="container">
         <div className="copyright">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
@@ -107,7 +106,7 @@ const FooterSection: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -4,9 +4,33 @@
     --light: #F0FBFC;
     --dark: #181d38;
 }
+.bg-powder-blue,
+.bg-powder-blue .accordion-button {
+  background-color: #effeff !important;
+}
+.btn-custom {
+  background-color: #effeff !important;
+  color: black;
+  border: none;
+}
 
-.bg-powder-blue {
-    background-color: #b0e0e6;
+.service-hover:hover {
+  background-color: #18373a !important;
+}
+
+.nav-container{
+
+}
+.site-top-navbar {
+    height: 45px;
+}
+.site-navbar {
+    position: fixed;
+    top: 45px;
+    z-index: 100;
+    width: 100%;
+    background: #fff;
+    padding: 5px 80px;
 }
 .bg-site-primary {
     --primary: #b2163d;
@@ -458,3 +482,16 @@
     padding-right: 0;
     border-right: none;
 }
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.zoom-image {
+  transition: transform 0.3s ease;
+}
+
+.zoom-image:hover {
+  transform: scale(1.1);
+}
+

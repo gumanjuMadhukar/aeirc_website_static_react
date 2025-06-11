@@ -2,13 +2,14 @@ import Categories from "../../components/Categories";
 import LabSection from "../../components/ProductSection";
 import TestimonialSection from "../../components/TestimonialSection";
 import ExamHeader from "../../components/ProductHeader";
+import ProductGallery from "../../components/ProductGallery";
 
 const products = () => {
   return (
     <div>
       <ExamHeader />
       <LabSection />
-      <Categories />
+      <ProductGallery/>
       <TestimonialSection />
     </div>
   );
