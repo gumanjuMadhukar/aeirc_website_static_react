@@ -4,7 +4,7 @@ export interface Service {
   title: string;
   description: string;
   detail: string;
-  lists: string,
+  lists: string[],
   // delay: string;
 }
 
@@ -16,7 +16,12 @@ export const services: Service[] = [
     description:
       "AEIRC is Nepal’s premier and most trusted provider of secure, scalable, and reliable computer-based testing solutions.",
     detail: "AEIRC is Nepal’s premier and most trusted provider of secure, scalable, and reliable computer-based testing solutions capable of accommodating more than 2,000 candidates per day in its three soundproof air-conditioned CBT exam labs. Our CBT solutions include",
-    lists:"",
+    lists:[
+    "Secure testing environment",
+    "Scalable infrastructure",
+    "Real-time result processing",
+    "Candidate identity verification",
+  ],
     // delay: "0.1s",
   },
   {
@@ -27,7 +32,12 @@ export const services: Service[] = [
       "Our solid server infrastructure underpins secure and effective client operations.",
     detail:
       "More about AEIRC’s server infrastructure, scalability and security standards...",
-    lists:"",
+    lists:[
+    "Secure testing environment",
+    "Scalable infrastructure",
+    "Real-time result processing",
+    "Candidate identity verification",
+  ],
     // delay: "0.3s",
   },
   {
@@ -38,7 +48,12 @@ export const services: Service[] = [
       "The organization is into dedicated software development, providing customized high-impact solutions to various industries.",
     detail:
       "AEIRC is Nepal’s premier and most trusted provider of secure, scalable, and reliable computer-based testing solutions capable of accommodating more than 2,000 candidates per day in its three soundproof air-conditioned CBT exam labs. Our CBT solutions include",
-    lists:"",
+    lists:[
+    "Secure testing environment",
+    "Scalable infrastructure",
+    "Real-time result processing",
+    "Candidate identity verification",
+  ],
     //  delay: "0.5s",
   },
   {
@@ -49,7 +64,12 @@ export const services: Service[] = [
       "AEIRC provides fully integrated IT consulting and infrastructure services.",
     detail:
       "More about AEIRC’s server infrastructure, scalability and security standards...",
-    lists:"",
+    lists:[
+    "Secure testing environment",
+    "Scalable infrastructure",
+    "Real-time result processing",
+    "Candidate identity verification",
+  ],
     // delay: "0.7s",
   },
   {
@@ -60,7 +80,12 @@ export const services: Service[] = [
       "AEIRC provides fully integrated IT consulting and infrastructure services to aid the acceleration of digital transformation.",
     detail:
       "More about AEIRC’s server infrastructure, scalability and security standards...",
-    lists:"",
+    lists:[
+    "Secure testing environment",
+    "Scalable infrastructure",
+    "Real-time result processing",
+    "Candidate identity verification",
+  ],
     // delay: "0.3s",
   },
   {
@@ -71,7 +96,12 @@ export const services: Service[] = [
       "AEIRC leads in health technology and provides unique solutions to improve healthcare access and outcomes.",
     detail:
       "More about AEIRC’s server infrastructure, scalability and security standards...",
-    lists:"",
+    lists:[
+    "Secure testing environment",
+    "Scalable infrastructure",
+    "Real-time result processing",
+    "Candidate identity verification",
+  ],
     // delay: "0.3s",
   },
   {
@@ -82,7 +112,12 @@ export const services: Service[] = [
       "AEIRC is pioneering AI and robotics education to prepare the next generation for a technology-driven future",
     detail:
       "More about AEIRC server infrastructure, scalability and security standards...",
-    lists:"",
+    lists:[
+    "Secure testing environment",
+    "Scalable infrastructure",
+    "Real-time result processing",
+    "Candidate identity verification",
+  ],
     // delay: "0.7s",
   },
   {
@@ -93,7 +128,12 @@ export const services: Service[] = [
       "AEIRC is committed to advancing research and fostering innovation.",
     detail:
       "More about AEIRC’s server infrastructure, scalability and security standards...",
-    lists:"",
+    lists:[
+    "Secure testing environment",
+    "Scalable infrastructure",
+    "Real-time result processing",
+    "Candidate identity verification",
+  ],
     // delay: "0.7s",
   },
 ];

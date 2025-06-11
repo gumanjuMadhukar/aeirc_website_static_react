@@ -64,7 +64,7 @@ const TestimonialSection: React.FC = () => {
           <h6 className="section-title bg-white text-center text-primary px-3">
             Testimonial
           </h6>
-          <h1 className="mb-5">Our Students Say!</h1>
+          <h1 className="mb-5">Our Clients Say!</h1>
         </div>
 
         <Slider {...settings}>

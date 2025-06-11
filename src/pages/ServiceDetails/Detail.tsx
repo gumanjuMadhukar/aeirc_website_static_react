@@ -4,8 +4,6 @@ import ServiceHeader from "../../components/ServiceHeader";
 
 const Details = () => {
   const { id } = useParams();
-  // console.log(id)
-
   const service = services.find((s) => s.id === id);
 
   if (!service) {
@@ -15,12 +13,33 @@ const Details = () => {
   return (
     <>
       <ServiceHeader />
-      <div className="max-w-4xl mx-auto py-10 px-6">
-        <div className="bg-white rounded-lg shadow-md p-8 flex flex-col items-center text-center space-y-6">
-          <i className={`fa fa-6x ${service.icon} text-primary mb-6`}></i>
-          <h1 className="text-4xl font-bold text-gray-900">{service.title}</h1>
-          <p className="text-lg text-gray-700 max-w-3xl">{service.description}</p>
-          <div className="text-gray-600 max-w-4xl whitespace-pre-line">{service.detail}</div>
+
+      <div className="container py-5">
+        <div className="row align-items-center gy-4">
+
+          {/* Details Section */}
+          <div className="col-12 col-md-8">
+            <div className="bg-white rounded shadow p-4">
+              <i className={`fa fa-6x ${service.icon} text-primary mb-3`}></i>
+              <h1 className="fw-bold">{service.title}</h1>
+              <p className="lead text-secondary">{service.description}</p>
+              <div className="text-muted mb-3" style={{ whiteSpace: "pre-line" }}>
+                {service.detail}
+              </div>
+
+              {/* Render the lists if available */}
+              {service.lists && service.lists.length > 0 && (
+                <ul className="list-disc list-inside text-muted">
+                  {service.lists.map((item, index) => (
+                    <li key={index} className="mb-1">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+
         </div>
       </div>
     </>
