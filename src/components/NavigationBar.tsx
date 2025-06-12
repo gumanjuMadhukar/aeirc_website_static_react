@@ -2,26 +2,29 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  useEffect(() => {
-    const handleScroll = () => {
-      const sc = window.scrollY;
-      const header = document.getElementById("header-sroll");
-      if (header) {
-        if (sc > 100) {
-          header.classList.add("small");
-        } else {
-          header.classList.remove("small");
-        }
-      }
-    };
+useEffect(() => {
+  const topBarHeight = 45;
+  const navbar = document.getElementById("main-navbar");
 
-    window.addEventListener("scroll", handleScroll);
+  const handleScroll = () => {
+    if (!navbar) return;
 
-    // Cleanup on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    if (window.scrollY > topBarHeight) {
+      navbar.style.top = "0px";
+    } else {
+      navbar.style.top = `${topBarHeight}px`;
+    }
+  };
+
+  handleScroll(); // Set on initial load
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+
+
+
   return (
     <div className="nav-container" onClick={() => console.log("Div clicked!")}>
       {/* Top bar */}
@@ -56,8 +59,8 @@ const Navbar = () => {
       </div>
 
       {/* Main navbar */}
-      <div className="px-3 m-3 W-100 site-navbar" id="header-sroll">
-        <nav className=" navbar navbar-expand-lg bg-white navbar-light sticky-top m-0 p-0">
+      <div className="container-fluid site-navbar" id="header-sroll">
+        <nav className=" navbar navbar-expand-lg bg-white navbar-light m-0 p-0" id="main-navbar">
           <NavLink
             to="/"
             end
@@ -88,21 +91,31 @@ const Navbar = () => {
 
           <div className="collapse navbar-collapse m-0" id="navbarCollapse">
             <div className="navbar-nav ms-auto">
-              {["/", "/about","/services", "/products", "/contact"].map((path, idx) => {
-                const label = ["Home", "About","Services", "Products", "Contact"][idx];
-                return (
-                  <NavLink
-                    key={path}
-                    to={path}
-                    end={path === "/"}
-                    className={({ isActive }) =>
-                      isActive ? "nav-item nav-link active" : "nav-item nav-link"
-                    }
-                  >
-                    {label}
-                  </NavLink>
-                );
-              })}
+              {["/", "/about", "/services", "/products", "/contact"].map(
+                (path, idx) => {
+                  const label = [
+                    "Home",
+                    "About",
+                    "Services",
+                    "Products",
+                    "Contact",
+                  ][idx];
+                  return (
+                    <NavLink
+                      key={path}
+                      to={path}
+                      end={path === "/"}
+                      className={({ isActive }) =>
+                        isActive
+                          ? "nav-item nav-link active"
+                          : "nav-item nav-link"
+                      }
+                    >
+                      {label}
+                    </NavLink>
+                  );
+                }
+              )}
 
               {/* <div className="nav-item dropdown">
                 <NavLink

@@ -9,6 +9,7 @@ import LabSection from "../../components/ProductSection";
 // import TeamSection from "../../components/TeamSection";
 import TestimonialSection from "../../components/TestimonialSection";
 import WhyUs from "../../components/WhyUs";
+import PartnersSection from "../../components/PartnersSection";
 // import About from "../../components/About";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <Categories />
       <LabSection />
       {/* <TeamSection/> */}
+      <PartnersSection/>
       <TestimonialSection />
     </div>
   );

@@ -32,6 +32,7 @@
     background: #fff;
     padding: 5px 80px;
 }
+
 .bg-site-primary {
     --primary: #b2163d;
 }
@@ -172,9 +173,17 @@
 }
 
 .navbar-light.sticky-top {
-    top: -100px;
+    top: 45px;
     transition: .5s;
 }
+/* Keeps navbar initially below the top bar */
+.sticky-top {
+  position: sticky;
+  top: 45px; /* Start below top bar */
+  z-index: 1020;
+  transition: top 0.3s ease;
+}
+
 
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {

@@ -44,10 +44,14 @@ const LabSection: React.FC = () => {
           <div className="col-lg-5 mb-4">
             <h2 className="mb-3">What We Offer</h2>
             <p>
-              AEIRC offers a suite of powerful IT products designed to support healthcare, education, and organizational needs. Each product is purpose-built and professionally maintained by our team of developers and IT specialists.
+              AEIRC offers a suite of powerful IT products designed to support
+              healthcare, education, and organizational needs. Each product is
+              purpose-built and professionally maintained by our team of
+              developers and IT specialists.
             </p>
             <p>
-              Explore our CMS, PIS, IMS, and Healthcare Management systems, tailored for scale, security, and user-friendliness.
+              Explore our CMS, PIS, IMS, and Healthcare Management systems,
+              tailored for scale, security, and user-friendliness.
             </p>
           </div>
 

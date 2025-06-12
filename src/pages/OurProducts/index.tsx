@@ -1,4 +1,3 @@
-import Categories from "../../components/Categories";
 import LabSection from "../../components/ProductSection";
 import TestimonialSection from "../../components/TestimonialSection";
 import ExamHeader from "../../components/ProductHeader";

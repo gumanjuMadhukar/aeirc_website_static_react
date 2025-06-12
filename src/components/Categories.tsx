@@ -1,5 +1,3 @@
-
-
 const Categories = () => {
   return (
     <div>
