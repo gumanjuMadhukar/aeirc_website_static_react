@@ -7,39 +7,65 @@ const Details = () => {
   const service = services.find((s) => s.id === id);
 
   if (!service) {
-    return <div className="text-red-500 text-center mt-10">Service not found.</div>;
+    return (
+      <div className="text-danger text-center mt-5">Service not found.</div>
+    );
   }
 
   return (
     <>
       <ServiceHeader />
 
-      <div className="container py-5">
-        <div className="row align-items-center gy-4">
-
-          {/* Details Section */}
-          <div className="col-12 col-md-8">
-            <div className="bg-white rounded shadow p-4">
-              <i className={`fa fa-6x ${service.icon} text-primary mb-3`}></i>
-              <h1 className="fw-bold">{service.title}</h1>
-              <p className="lead text-secondary">{service.description}</p>
-              <div className="text-muted mb-3" style={{ whiteSpace: "pre-line" }}>
-                {service.detail}
+      <div className="container-xxl py-5">
+        <div className="container">
+          <div className="row g-5">
+            {/* Image Section (left) */}
+            <div
+              className="col-lg-6 wow fadeInUp"
+              data-wow-delay="0.1s"
+              style={{ minHeight: "400px" }}
+            >
+              <div className="position-relative h-100">
+                <img
+                  className="img-fluid position-absolute w-100 h-100"
+                  src={service.image || "/img/default.jpg"} // Make sure to have `image` in your service object
+                  alt={service.title}
+                  style={{ objectFit: "cover" }}
+                />
               </div>
+            </div>
 
-              {/* Render the lists if available */}
+            {/* Text Content Section (right) */}
+            <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+              <h6 className="section-title bg-white text-start text-primary pe-3">
+                Our Services
+              </h6>
+              <h1 className="mb-4">{service.title}</h1>
+              <p className="mb-4">{service.description}</p>
+              <p className="mb-4" style={{ whiteSpace: "pre-line" }}>
+                {service.detail}
+              </p>
+
+              {/* Optional: List of features */}
               {service.lists && service.lists.length > 0 && (
-                <ul className="list-disc list-inside text-muted">
+                <div className="row gy-2 gx-4 mb-4">
                   {service.lists.map((item, index) => (
-                    <li key={index} className="mb-1">
-                      {item}
-                    </li>
+                    <div className="col-sm-6" key={index}>
+                      <p className="mb-0">
+                        <i className="fa fa-arrow-right text-primary me-2"></i>
+                        {item}
+                      </p>
+                    </div>
                   ))}
-                </ul>
+                </div>
               )}
+
+              {/* Back or CTA button */}
+              <a className="btn btn-custom py-3 px-5 mt-2" href="/">
+                Back to Services
+              </a>
             </div>
           </div>
-
         </div>
       </div>
     </>

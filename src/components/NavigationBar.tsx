@@ -34,13 +34,14 @@ useEffect(() => {
           target="_blank"
           rel="noopener noreferrer"
           className="text-nav text-decoration-none d-flex align-items-center"
-        >
+          >
+          {/* <h5>Email us at</h5> */}
           <i className="bi bi-envelope me-2"></i>
-          <small>info@aeirc.org</small>
+          <h5>info@aeirc.org</h5>
         </a>
         <div className="d-flex gap-3">
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/share/1Fg5keFa1e/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-nav"
@@ -48,7 +49,7 @@ useEffect(() => {
             <i className="bi bi-facebook"></i>
           </a>
           <a
-            href="https://www.linkedin.com"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             className="text-nav"
@@ -59,8 +60,8 @@ useEffect(() => {
       </div>
 
       {/* Main navbar */}
-      <div className="container-fluid site-navbar" id="header-sroll">
-        <nav className=" navbar navbar-expand-lg bg-white navbar-light m-0 p-0" id="main-navbar">
+      <div className="container-fluid site-navbar" >
+        <nav className=" navbar navbar-expand-lg bg-white navbar-light m-0 p-0" >
           <NavLink
             to="/"
             end

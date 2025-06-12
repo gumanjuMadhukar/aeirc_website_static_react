@@ -67,7 +67,7 @@ const About = () => {
               </div>
 
               {/* Read More Button */}
-              <a className="btn btn-primary py-3 px-5 mt-2" href="/about">
+              <a className="btn btn-custom py-3 px-5 mt-2" href="/about">
                 Read More
               </a>
             </div>

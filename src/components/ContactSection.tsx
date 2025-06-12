@@ -15,7 +15,7 @@ const contactInfo: ContactInfoItem[] = [
   {
     iconClass: "fas fa-phone-alt",
     title: "Mobile",
-    text: "+012 345 67890",
+    text: "9851046500",
   },
   {
     iconClass: "fas fa-envelope-open",
@@ -57,7 +57,8 @@ const ContactSection: React.FC = () => {
       formBody.append("subject", formData.subject);
       formBody.append("message", formData.message);
 
-      const response = await fetch("https://yourdomain.com/contact.php", {   //domain name here
+      const response = await fetch("https://yourdomain.com/contact.php", {
+        //domain name here
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -97,15 +98,26 @@ const ContactSection: React.FC = () => {
             {contactInfo.map(({ iconClass, title, text }) => (
               <div className="d-flex align-items-center mb-3" key={title}>
                 <div
-                  className="d-flex align-items-center justify-content-center flex-shrink-0 bg-site-primary
-"
+                  className="d-flex align-items-center justify-content-center flex-shrink-0 bg-site-primary"
                   style={{ width: "50px", height: "50px" }}
                 >
                   <i className={`${iconClass} text-black`}></i>
                 </div>
                 <div className="ms-3">
                   <h5 className="text-black">{title}</h5>
-                  <p className="mb-0">{text}</p>
+                  {title === "Email" ? (
+                    <a
+                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${text}&su=Booking%20Request`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-decoration-none d-flex align-items-center text-black"
+                    >
+                      {/* <i className="bi bi-envelope me-2"></i> */}
+                      <span>{text}</span>
+                    </a>
+                  ) : (
+                    <p className="mb-0">{text}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -126,7 +138,10 @@ const ContactSection: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+          <div
+            className="col-lg-4 col-md-12 wow fadeInUp"
+            data-wow-delay="0.5s"
+          >
             <form onSubmit={handleSubmit}>
               <div className="row g-3">
                 <div className="col-md-6">

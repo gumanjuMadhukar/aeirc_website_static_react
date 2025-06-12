@@ -45,7 +45,7 @@ const instructors: Instructor[] = [
     delay: "0.3s",
   },
   {
-    name: "Instructor Name",
+    name: " Name",
     title: "Designation",
     image: "img/team-4.jpg",
     delay: "0.5s",

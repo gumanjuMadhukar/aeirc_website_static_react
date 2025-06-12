@@ -1,0 +1,27 @@
+@media (max-width: 1401px) {
+    p{
+        font-size: 16px;
+    }
+
+
+  .service-container {
+    .service-item {
+      height: 350px;
+      padding: 10px !important;
+      > div {
+        padding: 10px !important;
+      }
+    }
+  }
+}
+@media (max-width: 1025px) {
+  .service-container {
+    .service-item {
+      height: 350px;
+      padding: 10px !important;
+      > div {
+        padding: 10px !important;
+      }
+    }
+  }
+}

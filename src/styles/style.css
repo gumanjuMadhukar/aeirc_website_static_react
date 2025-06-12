@@ -19,19 +19,31 @@
 }
 
 .nav-container{
+    .site-top-navbar{
+        >a{
+         h5{
+            margin-bottom: 0;
+         }  
+        }
+    }
+    /* .navbar-nav{
+        a:last-of-type{
+            background: #000;
 
+        }
+    } */
 }
-.site-top-navbar {
+/* .site-top-navbar {
     height: 45px;
-}
-.site-navbar {
+} */
+/* .site-navbar {
     position: fixed;
     top: 45px;
     z-index: 100;
     width: 100%;
     background: #fff;
     padding: 5px 80px;
-}
+} */
 
 .bg-site-primary {
     --primary: #b2163d;
@@ -351,7 +363,9 @@
 .team-item:hover img {
     transform: scale(1.1);
 }
-
+.img-container{
+    height: 300px;
+}
 
 /*** Testimonial ***/
 .testimonial-carousel::before {
@@ -504,3 +518,9 @@
   transform: scale(1.1);
 }
 
+.service-container
+{
+    .service-item{
+        height: 350px;
+    }
+}

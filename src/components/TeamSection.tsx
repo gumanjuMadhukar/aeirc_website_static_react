@@ -2,36 +2,36 @@
 
 const instructors = [
   {
-    name: 'Instructor Name',
+    name: 'Name',
     designation: 'Designation',
-    image: '/img/team-1.jpg',
+    image: '/img/Team/team-1.jpg',
     facebook: '#',
     twitter: '#',
     instagram: '#',
     delay: '0.1s',
   },
   {
-    name: 'Instructor Name',
+    name: 'Name',
     designation: 'Designation',
-    image: '/img/team-2.jpg',
+    image: '/img/Team/team-2.jpg',
     facebook: '#',
     twitter: '#',
     instagram: '#',
     delay: '0.3s',
   },
   {
-    name: 'Instructor Name',
+    name: 'Name',
     designation: 'Designation',
-    image: '/img/team-3.jpg',
+    image: '/img/Team/team-3.jpg',
     facebook: '#',
     twitter: '#',
     instagram: '#',
     delay: '0.5s',
   },
   {
-    name: 'Instructor Name',
+    name: 'Name',
     designation: 'Designation',
-    image: '/img/team-4.jpg',
+    image: '/img/Team/team-3.jpg',
     facebook: '#',
     twitter: '#',
     instagram: '#',
@@ -54,9 +54,9 @@ const TeamSection: React.FC = () => {
               data-wow-delay={instructor.delay}
               key={index}
             >
-              <div className="team-item bg-light">
-                <div className="overflow-hidden">
-                  <img className="img-fluid" src={instructor.image} alt={instructor.name} />
+              <div className="team-item bg-light ">
+                <div className="overflow-hidden ">
+                  <img className="img-fluid img-container" src={instructor.image} alt={instructor.name} />
                 </div>
                 <div
                   className="position-relative d-flex justify-content-center"

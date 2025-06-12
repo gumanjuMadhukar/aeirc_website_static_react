@@ -18,7 +18,7 @@ const testimonials: Testimonial[] = [
     text: "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sitTempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.",
   },
   {
-    imgSrc: "/img/testimonia-2.jpg",
+    imgSrc: "/img/testimonial-2.jpg",
     name: "Client Name",
     profession: "Profession",
     text: "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.",
@@ -71,12 +71,12 @@ const TestimonialSection: React.FC = () => {
           {testimonials.map((item, index) => (
             <div className="px-3" key={index}>
               <div className="testimonial-item text-center">
-                {/* <img
+                <img
                   className="border rounded-circle p-2 mx-auto mb-3"
                   src={item.imgSrc}
                   alt={item.name}
                   style={{ width: "80px", height: "80px" }}
-                /> */}
+                />
                 <h5 className="mb-0">{item.name}</h5>
                 <p>{item.profession}</p>
                 <div

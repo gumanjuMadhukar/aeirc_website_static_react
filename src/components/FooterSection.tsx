@@ -40,7 +40,7 @@ const FooterSection: React.FC = () => {
               <i className="fas fa-map-marker-alt me-3"></i>Babarmal, Kathmandu
             </p>
             <p className="mb-2">
-              <i className="fas fa-phone-alt me-3"></i>+012 345 67890
+              <i className="fas fa-phone-alt me-3"></i>9851046500
             </p>
             <p className="mb-2">
               <i className="fas fa-envelope me-3"></i>info@example.com

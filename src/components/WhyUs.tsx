@@ -7,48 +7,49 @@ type AccordionItem = {
 };
 
 const accordionData: AccordionItem[] = [
-  {
-    id: "one",
-    title: "Unmatched Experience",
-    content:
-      "Years of successfully managing Nepal’s largest exams, including those for NHPC, NPC, and British Council, with verified success.",
-  },
-  {
-    id: "two",
-    title: "Scalability & Security",
-    content:
-      "Capable of handling 100 to 2,000 candidates daily across three soundproof, air-conditioned CBT exam labs, with robust biometric and network security measures.",
-  },
-  {
-    id: "three",
-    title: "Advanced Infrastructure",
-    content:
-      "Three CBT exam labs, a dedicated waiting room, a soundproof telemedicine room, and two meeting halls supported by a powerful human resource team for seamless operations.",
-  },
-  {
-    id: "four",
-    title: "Technology-Driven Solutions",
-    content:
-      "From wearable health tech to custom LMS, AI diagnostics, and robotics education, we build for scale and impact.",
-  },
-  {
-    id: "five",
-    title: "Dedicated Team",
-    content:
-      "A multidisciplinary team of engineers, IT experts, exam coordinators, software developers, AI specialists, and certified invigilators.",
-  },
-  {
-    id: "six",
-    title: "Compliance & Quality",
-    content:
-      "ISO 9001:2015-certified, GDPR-ready, and fully compliant with Nepalese and international standards, with strict adherence to standardized protocols.",
-  },
-  {
-    id: "seven",
-    title: "Innovation Leadership",
-    content:
-      "Pioneering AI and robotics education, telemedicine, and AI-driven diagnostics to address emerging needs.",
-  },
+ {
+  id: "one",
+  title: "Unmatched Experience",
+  content:
+    "With decades of collective experience, we have successfully managed some of Nepal’s largest and most high-stakes examinations. Our portfolio includes comprehensive administration for institutions like NHPC, NPC, and the British Council. Our proven track record and client trust underscore our ability to deliver seamless, error-free exam solutions, time and again.",
+},
+{
+  id: "two",
+  title: "Scalability & Security",
+  content:
+    "Our infrastructure is built to scale. We are equipped to handle anywhere from 100 to 2,000 candidates daily across three technologically advanced, soundproof, and air-conditioned CBT labs. Security is paramount—our biometric authentication, real-time surveillance, and network isolation protocols ensure a secure and cheat-proof environment.",
+},
+{
+  id: "three",
+  title: "Advanced Infrastructure",
+  content:
+    "We offer a state-of-the-art examination ecosystem featuring three modern CBT labs, a comfortable and organized waiting room, a fully soundproof telemedicine suite, and two well-equipped meeting halls. This is supported by a dynamic human resource team that ensures smooth operations and unmatched logistical support.",
+},
+{
+  id: "four",
+  title: "Technology-Driven Solutions",
+  content:
+    "We harness cutting-edge technologies to deliver impactful solutions. Our offerings range from wearable health devices and custom-built LMS platforms to AI-powered diagnostics and advanced robotics education programs. These solutions are designed to scale efficiently while solving real-world problems with measurable results.",
+},
+{
+  id: "five",
+  title: "Dedicated Team",
+  content:
+    "Our strength lies in our people. Our team consists of highly trained professionals including engineers, IT specialists, certified invigilators, exam coordinators, software developers, and AI experts. This diverse expertise allows us to tackle complex challenges and deliver excellence at every stage of implementation.",
+},
+{
+  id: "six",
+  title: "Compliance & Quality",
+  content:
+    "We are committed to quality and regulatory excellence. As an ISO 9001:2015-certified and GDPR-ready organization, we operate under strict compliance with both national and international standards. Every protocol is followed rigorously to maintain the highest levels of quality assurance and data integrity.",
+},
+{
+  id: "seven",
+  title: "Innovation Leadership",
+  content:
+    "Innovation is at the heart of what we do. From spearheading initiatives in AI-driven education and diagnostics to deploying robotics and telemedicine in under-resourced areas, we are shaping the future. Our leadership in innovation ensures we stay ahead of trends while making a real-world impact.",
+}
+
 ];
 
 const WhyUs: React.FC = () => {

@@ -3,14 +3,16 @@ import ServiceSection from '../../components/ServiceSection'
 import About from '../../components/About'
 import TeamSection from '../../components/TeamSection'
 import WhyUs from '../../components/WhyUs'
+import PartnersSection from '../../components/PartnersSection'
 
 const AboutUs = () => {
   return (
     <div>
       <AboutHeader/>
       <About/>
-      <ServiceSection/>
       <WhyUs/>
+      <ServiceSection/>
+      <PartnersSection/>
       <TeamSection/>
     </div>
   )

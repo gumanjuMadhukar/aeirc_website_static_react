@@ -3,7 +3,7 @@ import { services } from "../pages/ServicePage/servicesData";
 
 const ServiceSection = () => {
   return (
-    <div className="container-xxl py-5 ">
+    <div className="container-xxl py-5 service-container">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
           <h6 className="section-title bg-white text-center text-primary px-3">
@@ -25,7 +25,6 @@ const ServiceSection = () => {
                 <a>
                   <div
                     className="service-item service-hover text-center pt-3 h-[350px] flex flex-col justify-between p-4 shadow-md rounded-lg transition duration-300"
-                    style={{ height: "350px" }}
                   >
                     <div className="p-4 ">
                       <i
