@@ -10,11 +10,13 @@ import LabSection from "../../components/ProductSection";
 import TestimonialSection from "../../components/TestimonialSection";
 import WhyUs from "../../components/WhyUs";
 import PartnersSection from "../../components/PartnersSection";
+// import ScrollToTopButton from "../../components/ScrollToTopButton";
+
 // import About from "../../components/About";
 
 const Home = () => {
   return (
-    <div>
+    <div id="home-page">
       <HomeBanner />
       <ServiceSection />
       <WhyUs/>
@@ -24,6 +26,7 @@ const Home = () => {
       {/* <TeamSection/> */}
       <PartnersSection/>
       <TestimonialSection />
+      {/* <ScrollToTopButton/> */}
     </div>
   );
 };

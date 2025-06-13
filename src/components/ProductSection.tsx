@@ -57,9 +57,9 @@ const LabSection: React.FC = () => {
 
           {/* Right Side - 60% */}
           <div className="col-lg-7">
-            <div className="row g-4">
+            <div className="row g-4 product-row">
               {courses.map((course) => (
-                <div key={course.id} className="col-md-6">
+                <div key={course.id} className="col-md-6 product-items">
                   <div className="card h-100 shadow-sm border-0 overflow-hidden group">
                     <img
                       src={course.image}

@@ -49,7 +49,7 @@ const slides: Slide[] = [
 
 const HomeBanner: React.FC = () => {
   return (
-    <div
+    <div id="home-banner"
       style={{
         width: "100vw",
         height: "80vh",
@@ -104,7 +104,7 @@ const HomeBanner: React.FC = () => {
                 color: "white",
               }}
             >
-              <div
+              <div className="banner-padding"
                 style={{
                   position: "absolute",
                   top: 0,

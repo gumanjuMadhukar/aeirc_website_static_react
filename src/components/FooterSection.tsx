@@ -1,11 +1,11 @@
 const FooterSection: React.FC = () => {
   return (
-    <div
+    <div id="footer-page"
       className="container-fluid text-dark footer pt-5 mt-5 wow fadeIn"
       style={{ backgroundColor: "#eef6f9" }}
       data-wow-delay="0.1s"
     >
-      <div className="container py-5 ">
+      <div className="container py-5">
         <div className="row g-5">
           <div className="col-lg-6 col-md-6">
             <img

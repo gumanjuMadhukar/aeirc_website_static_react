@@ -19,6 +19,7 @@ import "./styles/style.css";
 import "./styles/responsive.css";
 import FooterSection from "./components/FooterSection";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 import "slick-carousel/slick/slick.css";

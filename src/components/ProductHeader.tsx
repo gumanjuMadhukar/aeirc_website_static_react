@@ -3,7 +3,7 @@ import React from "react";
 const ExamHeader: React.FC = () => {
   return (
     <div className="container-fluid bg-site-primary
- py-5 mb-5 page-header">
+ py-5 mb-5 page-header product">
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-10 text-center">

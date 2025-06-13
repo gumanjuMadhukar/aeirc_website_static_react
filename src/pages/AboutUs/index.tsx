@@ -7,7 +7,7 @@ import PartnersSection from '../../components/PartnersSection'
 
 const AboutUs = () => {
   return (
-    <div>
+    <div id="about_us-page">
       <AboutHeader/>
       <About/>
       <WhyUs/>

@@ -37,7 +37,7 @@ const ServiceSection = () => {
                   </div>
                 </a>
               </Link>
-            </div>
+             </div>
           ))}
         </div>
       </div>

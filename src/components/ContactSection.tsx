@@ -90,7 +90,7 @@ const ContactSection: React.FC = () => {
           </h6>
           <h1 className="mb-5">Contact For Any Query</h1>
         </div>
-        <div className="row g-4">
+        <div className="row g-4 contact-row">
           {/* Contact Info */}
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <h5>Get In Touch</h5>
@@ -124,7 +124,7 @@ const ContactSection: React.FC = () => {
           </div>
 
           {/* Google Maps */}
-          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div className="col-lg-4 col-md-6 g-4 map wow fadeInUp" data-wow-delay="0.3s">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.85604596331!2d85.32434121132162!3d27.690843776092727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19cfc621cdf5%3A0xf81f589e0bfe1f46!2sAdvance%20Education%20%26%20Innovative%20Research%20Center%20(AEIRC)!5e0!3m2!1sen!2snp!4v1749118691909!5m2!1sen!2snp"
               width="100%"
@@ -139,11 +139,11 @@ const ContactSection: React.FC = () => {
 
           {/* Contact Form */}
           <div
-            className="col-lg-4 col-md-12 wow fadeInUp"
+            className="col-lg-4 col-md-12 py-5 wow fadeInUp"
             data-wow-delay="0.5s"
           >
             <form onSubmit={handleSubmit}>
-              <div className="row g-3">
+              <div className="row form g-3">
                 <div className="col-md-6">
                   <div className="form-floating">
                     <input
@@ -199,7 +199,7 @@ const ContactSection: React.FC = () => {
                     <label htmlFor="message">Message</label>
                   </div>
                 </div>
-                <div className="col-12">
+                <div className="col-12 btn-floating">
                   <button
                     className="btn btn-custom  w-100 py-3"
                     type="submit"

@@ -56,7 +56,7 @@ const TeamSection: React.FC = () => {
             >
               <div className="team-item bg-light ">
                 <div className="overflow-hidden ">
-                  <img className="img-fluid img-container" src={instructor.image} alt={instructor.name} />
+                  <img className="img-fluid img-container team-img-container" src={instructor.image} alt={instructor.name} />
                 </div>
                 <div
                   className="position-relative d-flex justify-content-center"
