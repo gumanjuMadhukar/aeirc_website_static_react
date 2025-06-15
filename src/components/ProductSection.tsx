@@ -39,9 +39,9 @@ const LabSection: React.FC = () => {
           <h1 className="mb-5">Products Of AEIRC</h1>
         </div>
 
-        <div className="row">
+        <div className="row lab-section-row">
           {/* Left Side - 40% */}
-          <div className="col-lg-5 mb-4">
+          <div className="col-lg-5 col-md-6 custom-left mb-4">
             <h2 className="mb-3">What We Offer</h2>
             <p>
               AEIRC offers a suite of powerful IT products designed to support
@@ -56,10 +56,10 @@ const LabSection: React.FC = () => {
           </div>
 
           {/* Right Side - 60% */}
-          <div className="col-lg-7">
-            <div className="row g-4 product-row">
-              {courses.map((course) => (
-                <div key={course.id} className="col-md-6 product-items">
+          <div className="col-lg-7 col-md-6 custom-right">
+  <div className=" product-row">
+    {courses.map((course) => (
+      <div key={course.id} className="product-items">
                   <div className="card h-100 shadow-sm border-0 overflow-hidden group">
                     <img
                       src={course.image}

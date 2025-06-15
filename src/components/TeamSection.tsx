@@ -63,13 +63,13 @@ const TeamSection: React.FC = () => {
                   style={{ marginTop: '-23px' }}
                 >
                   <div className="bg-light d-flex justify-content-center pt-2 px-1">
-                    <a className="btn btn-sm-square btn-primary mx-1" href={instructor.facebook}>
+                    <a className="btn btn-sm-square btn-custom mx-1" href={instructor.facebook}>
                       <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a className="btn btn-sm-square btn-primary mx-1" href={instructor.twitter}>
+                    <a className="btn btn-sm-square btn-custom mx-1" href={instructor.twitter}>
                       <i className="fab fa-twitter"></i>
                     </a>
-                    <a className="btn btn-sm-square btn-primary mx-1" href={instructor.instagram}>
+                    <a className="btn btn-sm-square btn-custom mx-1" href={instructor.instagram}>
                       <i className="fab fa-instagram"></i>
                     </a>
                   </div>

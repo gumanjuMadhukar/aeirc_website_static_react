@@ -2,28 +2,25 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-useEffect(() => {
-  const topBarHeight = 45;
-  const navbar = document.getElementById("main-navbar");
+  useEffect(() => {
+    const topBarHeight = 45;
+    const navbar = document.getElementById("main-navbar");
 
-  const handleScroll = () => {
-    if (!navbar) return;
+    const handleScroll = () => {
+      if (!navbar) return;
 
-    if (window.scrollY > topBarHeight) {
-      navbar.style.top = "0px";
-    } else {
-      navbar.style.top = `${topBarHeight}px`;
-    }
-  };
+      if (window.scrollY > topBarHeight) {
+        navbar.style.top = "0px";
+      } else {
+        navbar.style.top = `${topBarHeight}px`;
+      }
+    };
 
-  handleScroll(); // Set on initial load
+    handleScroll(); // Set on initial load
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
-
-
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="nav-container" onClick={() => console.log("Div clicked!")}>
@@ -34,7 +31,7 @@ useEffect(() => {
           target="_blank"
           rel="noopener noreferrer"
           className="text-nav text-decoration-none d-flex align-items-center"
-          >
+        >
           {/* <h5>Email us at</h5> */}
           <i className="bi bi-envelope me-2"></i>
           <h5>info@aeirc.org</h5>
@@ -60,8 +57,8 @@ useEffect(() => {
       </div>
 
       {/* Main navbar */}
-      <div className="container-fluid site-navbar" >
-        <nav className=" navbar navbar-expand-lg bg-white navbar-light m-0 p-0" >
+      <div className="container-fluid site-navbar ">
+        <nav className=" navbar navbar-expand-lg bg-white navbar-light m-0 p-0">
           <NavLink
             to="/"
             end
@@ -74,7 +71,7 @@ useEffect(() => {
             <img
               src="/img/logo_AEIRC.png"
               alt="Logo"
-              style={{ width: "120px", height: "auto" }}
+              style={{ width: "120px", height: "auto"}}
             />
           </NavLink>
 

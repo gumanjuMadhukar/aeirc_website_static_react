@@ -1,4 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+// import Navbar from "./components/navbar";
+import Navbar from "./components/NavigationBar";
 import Home from "./pages/Homepage";
 import AboutUs from "./pages/AboutUs";
 import OurProducts from "./pages/OurProducts";
@@ -8,16 +11,14 @@ import NotFoundPage from "./pages/NotFoundPage";
 import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
 import Details from "./pages/ServicePage/Detail";
+import FooterSection from "./components/FooterSection";
 
-// import Navbar from "./components/navbar";
-import Navbar from "./components/NavigationBar";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 // import "./js/main.js";
 import "./styles/style.css";
 import "./styles/responsive.css";
-import FooterSection from "./components/FooterSection";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -28,6 +29,7 @@ import "slick-carousel/slick/slick-theme.css";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

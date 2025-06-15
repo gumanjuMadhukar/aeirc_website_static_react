@@ -3,7 +3,7 @@ import TestimonialHeader from '../../components/TestimonialHeader'
 
 const Testimonial = () => {
   return (
-    <div>
+    <div id="testimonial-page">
       <TestimonialHeader/>
       <TestimonialSection/>
     </div>

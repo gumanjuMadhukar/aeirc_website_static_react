@@ -4,7 +4,7 @@ import NotFoundContent from '../../components/NotFoundContent'
 
 const NotFoundHeader = () => {
   return (
-    <div>
+    <div id="not_found-page">
       <NotFound404Header/>
       <NotFoundContent/>
     </div>

@@ -6,7 +6,7 @@ import PartnersSection from "../../components/PartnersSection";
 
 const products = () => {
   return (
-    <div>
+    <div id="product-page">
       <ExamHeader />
       <LabSection />
       {/* <ProductGallery/> */}

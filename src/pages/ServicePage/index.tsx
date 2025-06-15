@@ -3,7 +3,7 @@ import ServiceSection from "../../components/ServiceSection"
 
 const index = () => {
   return (
-    <div>
+    <div id="service-page">
       <ServiceHeader/>
       <ServiceSection/>
     </div>

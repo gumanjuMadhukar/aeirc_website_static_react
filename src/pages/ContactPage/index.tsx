@@ -3,7 +3,7 @@ import ContactSection from '../../components/ContactSection'
 
 const index = () => {
   return (
-    <div>
+    <div id="contact_us-page">
       <ContactHeader/>
       <ContactSection/>
     </div>
