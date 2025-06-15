@@ -1,5 +1,3 @@
-import React from "react";
-
 const national = [
   {
     src: "/img/partners/national/NHPC.png",
