@@ -19,8 +19,7 @@ jobs:
         npm run build
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.coludtechit.solutions
         username: cloudtech
-        password: ${{ secrets.password }}
+        password: Vikes@9840
