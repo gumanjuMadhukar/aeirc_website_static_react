@@ -4,7 +4,7 @@ const Categories = () => {
       <div className="container-xxl py-5 category">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 className="section-title bg-white text-center text-primary px-3">
+          <h6 className="section-title bg-white text-center text-highlight px-3">
             AEIRC
           </h6>
           <h1 className="mb-5"> Gallery</h1>
@@ -19,11 +19,11 @@ const Categories = () => {
                 <a className="position-relative d-block overflow-hidden" href="#">
                   <img className="img-fluid" src="public/img/AEIRC_Gallery/gallery1.jpg" alt="Web Design" />
                   <div
-                    className="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                    className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
                   >
                     <h5 className="m-0">Our Lab</h5>
-                    <small className="text-primary">100 Computers</small>
+                    <small className="text-highlight">100 Computers</small>
                   </div>
                 </a>
               </div>
@@ -33,11 +33,11 @@ const Categories = () => {
                 <a className="position-relative d-block overflow-hidden" href="#">
                   <img className="img-fluid" src="public/img/AEIRC_Gallery/gallery2.jpg" alt="Graphic Design" />
                   <div
-                    className="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                    className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
                   >
                     <h5 className="m-0">Our Lab</h5>
-                    <small className="text-primary">49 Computers</small>
+                    <small className="text-highlight">49 Computers</small>
                   </div>
                 </a>
               </div>
@@ -47,11 +47,11 @@ const Categories = () => {
                 <a className="position-relative d-block overflow-hidden" href="#">
                   <img className="img-fluid" src="public/img/lab.jpg" alt="Video Editing" />
                   <div
-                    className="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                    className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
                   >
                     <h5 className="m-0">Exam Hall</h5>
-                    <small className="text-primary"></small>
+                    <small className="text-highlight"></small>
                   </div>
                 </a>
               </div>
@@ -72,11 +72,11 @@ const Categories = () => {
                 style={{ objectFit: 'cover' }}
               />
               <div
-                className="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                 style={{ margin: '1px' }}
               >
                 <h5 className="m-0">Meeting Hall</h5>
-                {/* <small className="text-primary">49 Courses</small> */}
+                {/* <small className="text-highlight">49 Courses</small> */}
               </div>
             </a>
           </div>

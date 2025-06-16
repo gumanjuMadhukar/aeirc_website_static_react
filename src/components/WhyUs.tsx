@@ -59,7 +59,7 @@ const WhyUs: React.FC = () => {
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 className="section-title bg-white text-center text-primary px-3">
+          <h6 className="section-title bg-white text-center text-highlight px-3">
             WHY US?
           </h6>
           <h1 className="mb-5">Why Choose AEIRC</h1>
@@ -73,7 +73,7 @@ const WhyUs: React.FC = () => {
 
             return (
               <div
-                className={`accordion-item ${isActive ? "bg-powder-blue" : ""}`}
+                className={`accordion-item ${isActive ? "bg-whyus-blue" : ""}`}
                 key={item.id}
               >
                 <h2 className="accordion-header" id={headingId}>
@@ -99,7 +99,7 @@ const WhyUs: React.FC = () => {
                     isActive ? "show" : ""
                   }`}
                   aria-labelledby={headingId}
-                  data-bs-parent="#accordionExample"
+                  data-bs-parent="#4eeaeaordionExample"
                 >
                   <div className="accordion-body">
                     {item.content}

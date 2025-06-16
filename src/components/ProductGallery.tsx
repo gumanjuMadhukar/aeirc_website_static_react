@@ -4,7 +4,7 @@ const ProductGallery = () => {
       <div className="container-xxl py-5 category">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 className="section-title bg-white text-center text-primary px-3">
+          <h6 className="section-title bg-white text-center text-highlight px-3">
             AEIRC
           </h6>
           <h1 className="mb-5">Product Gallery</h1>
@@ -23,7 +23,7 @@ const ProductGallery = () => {
                     style={{ margin: '1px' }}
                   >
                     <h5 className="m-0">Our Lab 1</h5>
-                    <small className="text-primary">100 Computers</small>
+                    <small className="text-highlight">100 Computers</small>
                   </div>
                 </a>
               </div>
@@ -37,7 +37,7 @@ const ProductGallery = () => {
                     style={{ margin: '1px' }}
                   >
                     <h5 className="m-0">Lab 2</h5>
-                    <small className="text-primary">49 Computers</small>
+                    <small className="text-highlight">49 Computers</small>
                   </div>
                 </a>
               </div>
@@ -51,7 +51,7 @@ const ProductGallery = () => {
                     style={{ margin: '1px' }}
                   >
                     <h5 className="m-0">Lab 3</h5>
-                    <small className="text-primary">49 Computers</small>
+                    <small className="text-highlight">49 Computers</small>
                   </div>
                 </a>
               </div>
@@ -76,7 +76,7 @@ const ProductGallery = () => {
                 style={{ margin: '1px' }}
               >
                 <h5 className="m-0">Meeting hall</h5>
-                {/* <small className="text-primary">49 Courses</small> */}
+                {/* <small className="text-highlight">49 Courses</small> */}
               </div>
             </a>
           </div>

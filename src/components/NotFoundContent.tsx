@@ -6,7 +6,7 @@ const NotFoundContent: React.FC = () => {
       <div className="container text-center">
         <div className="row justify-content-center">
           <div className="col-lg-6">
-            <i className="bi bi-exclamation-triangle display-1 text-primary"></i>
+            <i className="bi bi-exclamation-triangle display-1 text-highlight"></i>
             <h1 className="display-1">404</h1>
             <h1 className="mb-4">Page Not Found</h1>
             <p className="mb-4">

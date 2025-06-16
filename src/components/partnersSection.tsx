@@ -40,7 +40,7 @@ const PartnersSection = () => {
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center mb-5">
-          <h6 className="section-title bg-white text-center text-primary px-3">
+          <h6 className="section-title bg-white text-center text-highlight px-3">
             Our Partners
           </h6>
           <h1 className="mb-4">AEIRC Is Partners With</h1>
@@ -49,7 +49,7 @@ const PartnersSection = () => {
         <div className="row">
           {/* Left Side – 30% */}
           <div className="col-lg-4 mb-4 p-4">
-            <h2 className="mb-3">Our National Partners</h2>
+            <h2 className="mb-3 text-highlight">Our National Partners</h2>
             <p>
               AEIRC has built a strong reputation through partnerships with
               leading national organizations. These collaborations showcase our
@@ -81,7 +81,7 @@ const PartnersSection = () => {
         <div className="row">
           {/* Left Side – 30% */}
           <div className="col-lg-4 mb-4">
-            <h2 className="mb-3">Our International Partners</h2>
+            <h2 className="mb-3 text-highlight">Our International Partners</h2>
             <p>
               In addition to our national success, AEIRC has established
               impactful partnerships with renowned international institutions.

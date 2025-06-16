@@ -14,7 +14,7 @@ const Navbar = () => {
         alt="Logo"
         style={{ width: "120px", height: "auto" }} // Customize size
       />
-          {/* <h2 className="m-0 text-primary">
+          {/* <h2 className="m-0 text-highlight">
             <i className="fa fa-book me-3"></i>AEIRC
           </h2> */}
         </Link>

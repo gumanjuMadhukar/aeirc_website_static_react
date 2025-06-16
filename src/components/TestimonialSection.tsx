@@ -61,7 +61,7 @@ const TestimonialSection: React.FC = () => {
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center">
-          <h6 className="section-title bg-white text-center text-primary px-3">
+          <h6 className="section-title bg-white text-center text-highlight px-3">
             Testimonial
           </h6>
           <h1 className="mb-5">Our Clients Say!</h1>

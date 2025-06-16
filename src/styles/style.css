@@ -6,16 +6,38 @@
 }
 .bg-powder-blue,
 .bg-powder-blue .accordion-button {
-  background-color: #effeff !important;
+  /* background-color: #06bbcc !important; */
+  /* background-color: #4f6c94 !important; */
+  background-color: #375b8b !important;
+  /* background-color: #6e7d9a !important; */
+  /* background-color: #5981a5 !important; */
+
+  /* background-color: #effeff !important; */
+}
+.bg-whyus-blue {
+  background-color: #e9f1fc !important;
 }
 .btn-custom {
-  background-color: #effeff !important;
-  color: black;
+  background-color: #375b8b !important;
+  color: #ffffff;
   border: none;
+  /* transition: all 0.3s ease !important; */
+}
+.btn-custom:hover {
+  background-color: #e9f1fc !important;
+  color: #375b8b !important;
+}
+.btn-custom:hover i {
+  color: #375b8b !important;
+}
+.service-bg{
+  background-color: #e9f1fc !important;
+  color: #375b8b !important;
 }
 
 .service-hover:hover {
-  background-color: #18373a !important;
+  background-color: #375b8b !important;
+  /* color:white; */
 }
 
 .nav-container {
@@ -51,13 +73,21 @@
 .navbar-brand {
   padding: 0 !important;
 }
+.nav-item.nav-link:hover{
+  color: #375b8b !important; 
+}
 .nav-item.nav-link.active {
   font-weight: bold;
-  color: #0d6efd; /* Bootstrap primary */
+  color: #375b8b !important; 
 }
-
+.text-highlight {
+  color: #375b8b;
+}
 .text-nav {
-  color: #000000;
+  color: #ffffff;
+}
+.text-nav:hover{
+  color:#ffffff;
 }
 .fw-medium {
   font-weight: 600 !important;
@@ -161,7 +191,6 @@
   color: var(--primary);
 }
 #home-page {
-    
 }
 @media (max-width: 991.98px) {
   .navbar-light .navbar-nav .nav-link {
@@ -268,24 +297,24 @@
 .page-header {
   background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)),
     url(../img/carousel-1.jpg);
-  background-position: center ;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  &.contact{
+  &.contact {
     background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)),
-    url(../img/Banner/caurosel-2.jpg);
+      url(../img/Banner/caurosel-2.jpg);
   }
-  &.service{
+  &.service {
     background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)),
-    url(../img/AEIRC_Gallery/gallery1.jpg);
+      url(../img/AEIRC_Gallery/gallery1.jpg);
   }
-  &.product{
+  &.product {
     background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)),
-    url(../img/AEIRC_Gallery/gallery2.jpg);
+      url(../img/AEIRC_Gallery/gallery2.jpg);
   }
-  &.about{
+  &.about {
     background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)),
-    url(../img/Banner/caurosel-3.jpg);
+      url(../img/Banner/caurosel-3.jpg);
   }
 }
 
@@ -461,20 +490,21 @@
 /*** Footer ***/
 .footer .btn.btn-social {
   margin-right: 5px;
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--light);
   font-weight: normal;
-  border: 1px solid #ffffff;
+  border: 3px solid #ffffff !important;
   border-radius: 35px;
   transition: 0.3s;
 }
 
 .footer .btn.btn-social:hover {
-  color: var(--primary);
+  color: #ffffff !important;
+  background-color: #375b8b;
 }
 
 .footer .btn.btn-link {
@@ -482,7 +512,7 @@
   margin-bottom: 5px;
   padding: 0;
   text-align: left;
-  color: #ffffff;
+  color: #000 !important;
   font-size: 15px;
   font-weight: normal;
   text-transform: capitalize;
@@ -500,6 +530,7 @@
 .footer .btn.btn-link:hover {
   letter-spacing: 1px;
   box-shadow: none;
+  color:#375b8b !important;
 }
 
 .footer .copyright {
@@ -540,4 +571,7 @@
   .service-item {
     height: 350px;
   }
+}
+.product-items:hover .card-img-top {
+  transform: scale(1.2);
 }

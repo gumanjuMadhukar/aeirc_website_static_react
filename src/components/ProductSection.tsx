@@ -33,7 +33,7 @@ const LabSection: React.FC = () => {
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 className="section-title bg-white text-center text-primary px-3">
+          <h6 className="section-title bg-white text-center text-highlight px-3">
             Our Products
           </h6>
           <h1 className="mb-5">Products Of AEIRC</h1>
@@ -42,7 +42,7 @@ const LabSection: React.FC = () => {
         <div className="row lab-section-row">
           {/* Left Side - 40% */}
           <div className="col-lg-5 col-md-6 custom-left mb-4">
-            <h2 className="mb-3">What We Offer</h2>
+            <h2 className="mb-3 text-highlight">What We Offer</h2>
             <p>
               AEIRC offers a suite of powerful IT products designed to support
               healthcare, education, and organizational needs. Each product is
@@ -57,18 +57,24 @@ const LabSection: React.FC = () => {
 
           {/* Right Side - 60% */}
           <div className="col-lg-7 col-md-6 custom-right">
-  <div className=" product-row">
-    {courses.map((course) => (
-      <div key={course.id} className="product-items">
+            <div className="product-row">
+              {courses.map((course) => (
+                <div key={course.id} className="product-items">
                   <div className="card h-100 shadow-sm border-0 overflow-hidden group">
-                    <img
-                      src={course.image}
-                      alt={course.title}
-                      className="card-img-top zoom-hover"
-                      style={{ height: "200px", objectFit: "cover" }}
-                    />
+                    <div className="overflow-hidden">
+                      <img
+                        src={course.image}
+                        alt={course.title}
+                        className="card-img-top zoom-hover"
+                        style={{
+                          height: "200px",
+                          objectFit: "cover",
+                          transition: "transform 0.4s ease",
+                        }}
+                      />
+                    </div>
                     <div className="card-body">
-                      <h5 className="card-title fw-bold">{course.title}</h5>
+                      <h5 className="card-title text-highlight fw-bold">{course.title}</h5>
                       <p className="card-text small">{course.description}</p>
                     </div>
                   </div>

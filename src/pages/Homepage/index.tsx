@@ -3,9 +3,9 @@
 // import 'swiper/css/pagination';
 
 import HomeBanner from "../../components/Banner/homeBanner";
-import ServiceSection from "../../components/ServiceSection";
+import ServiceSection from "../../components/ServicePageComponent/ServiceSection";
 import Categories from "../../components/Categories";
-import LabSection from "../../components/ProductSection";
+import ProductSection from "../../components/ProductSection";
 // import TeamSection from "../../components/TeamSection";
 import TestimonialSection from "../../components/TestimonialSection";
 import WhyUs from "../../components/WhyUs";
@@ -22,7 +22,7 @@ const Home = () => {
       <WhyUs/>
       {/* <About/> */}
       <Categories />
-      <LabSection />
+      <ProductSection />
       {/* <TeamSection/> */}
       <PartnersSection/>
       <TestimonialSection />

@@ -1,13 +1,13 @@
-import ServiceHeader from "../../components/ServiceHeader"
-import ServiceSection from "../../components/ServiceSection"
+import ServiceHeader from "../../components/ServicePageComponent/ServiceHeader";
+import ServiceSection from "../../components/ServicePageComponent/ServiceSection";
 
 const index = () => {
   return (
     <div id="service-page">
-      <ServiceHeader/>
-      <ServiceSection/>
+      <ServiceHeader />
+      <ServiceSection />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;

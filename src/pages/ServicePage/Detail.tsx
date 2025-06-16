@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import { services } from "./servicesData";
-import ServiceHeader from "../../components/ServiceHeader";
+import ServiceHeader from "../../components/ServicePageComponent/ServiceHeader";
 // import { useEffect } from "react";
 
 const Details = () => {
   const { id } = useParams();
   const service = services.find((s) => s.id === id);
-// useEffect(() => {
-//   window.scrollTo({ top: 0, behavior: "smooth" });
-// }, [id]); // 👈 This triggers scroll when `id` changes
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // }, [id]); // 👈 This triggers scroll when `id` changes
 
   if (!service) {
     return (
@@ -42,7 +42,7 @@ const Details = () => {
 
               {/* Text Content Section (right) */}
               <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h6 className="section-title bg-white text-start text-primary pe-3">
+                <h6 className="section-title bg-white text-start text-highlight pe-3">
                   Our Services
                 </h6>
                 <h1 className="mb-4">{service.title}</h1>
@@ -57,7 +57,7 @@ const Details = () => {
                     {service.lists.map((item, index) => (
                       <div className="col-sm-6" key={index}>
                         <p className="mb-0">
-                          <i className="fa fa-arrow-right text-primary me-2"></i>
+                          <i className="fa fa-arrow-right text-highlight me-2"></i>
                           {item}
                         </p>
                       </div>

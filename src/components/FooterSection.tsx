@@ -1,8 +1,9 @@
 const FooterSection: React.FC = () => {
   return (
-    <div id="footer-page"
+    <div
+      id="footer-page"
       className="container-fluid text-dark footer pt-5 mt-5 wow fadeIn"
-      style={{ backgroundColor: "#eef6f9" }}
+      style={{ backgroundColor: "#e9f1fc" }}
       data-wow-delay="0.1s"
     >
       <div className="container py-5">
@@ -14,7 +15,9 @@ const FooterSection: React.FC = () => {
               className="img-fluid"
               style={{ maxWidth: 100, margin: "0", display: "block" }}
             />
-            <h3 className="text-dark mb-3">Advance Education & Innovative Research Centre Pvt. Ltd.</h3>
+            <h3 className="text-dark mb-3">
+              Advance Education & Innovative Research Centre Pvt. Ltd.
+            </h3>
           </div>
           <div className="col-lg-3 col-md-6">
             <h4 className="text-dark mb-3">Quick Link</h4>
