@@ -21,6 +21,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: 216.14.124.9
+        server: ftp@216.14.124.9
         username: cloudtech
         password: Vikes@9840
