@@ -1,5 +1,5 @@
-import TeamHeader from '../../components/TeamHeader'
-import OurTeam from '../../components/OurTeam'
+import TeamHeader from '../../components/TeamComponent/TeamHeader'
+import OurTeam from '../../components/TeamComponent/OurTeam'
 
 const Team = () => {
   return (

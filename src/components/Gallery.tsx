@@ -45,7 +45,7 @@ const Categories = () => {
               {/* Video Editing */}
               <div className="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                 <a className="position-relative d-block overflow-hidden" href="#">
-                  <img className="img-fluid" src="public/img/lab.jpg" alt="Video Editing" />
+                  <img className="img-fluid" src="/img/lab.jpg" alt="Video Editing" />
                   <div
                     className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
@@ -67,7 +67,7 @@ const Categories = () => {
             <a className="position-relative d-block h-100 overflow-hidden" href="#">
               <img
                 className="img-fluid position-absolute w-100 h-100"
-                src="public/img/AEIRC_Gallery/gallery5.jpg"
+                src="/img/AEIRC_Gallery/gallery5.jpg"
                 alt="Online Marketing"
                 style={{ objectFit: 'cover' }}
               />

@@ -46,19 +46,38 @@ const FooterSection: React.FC = () => {
               <i className="fas fa-phone-alt me-3"></i>9851046500
             </p>
             <p className="mb-2">
-              <i className="fas fa-envelope me-3"></i>info@example.com
+              <span className="custom-tooltip-wrapper">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.org&su=Booking%20Request"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-nav text-decoration-none d-flex align-items-center"
+                >
+                  <i className="fas fa-envelope me-3"></i>info@aeirc.com
+                </a>
+                <span className="custom-tooltip-text">
+                  Email us for booking
+                </span>
+              </span>
             </p>
+
             <div className="d-flex pt-2">
               <a className="btn btn-outline-light btn-social" href="#">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a className="btn btn-outline-light btn-social" href="#">
+              <a
+                className="btn btn-outline-light btn-social"
+                href="https://www.facebook.com/share/1Fg5keFa1e/"
+              >
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a className="btn btn-outline-light btn-social" href="#">
                 <i className="fab fa-youtube"></i>
               </a>
-              <a className="btn btn-outline-light btn-social" href="#">
+              <a
+                className="btn btn-outline-light btn-social"
+                href="https://www.linkedin.com/company/aeirc-tech/?originalSubdomain=np"
+              >
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>

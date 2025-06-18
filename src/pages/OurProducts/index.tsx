@@ -1,6 +1,6 @@
-import LabSection from "../../components/ProductSection";
-import TestimonialSection from "../../components/TestimonialSection";
-import ExamHeader from "../../components/ProductHeader";
+import LabSection from "../../components/ProductRelatedComponent/ProductSection";
+import TestimonialSection from "../../components/TestimonialComponent/TestimonialSection";
+import ExamHeader from "../../components/ProductRelatedComponent/ProductHeader";
 // import ProductGallery from "../../components/ProductGallery";
 import PartnersSection from "../../components/PartnersSection";
 
@@ -10,7 +10,7 @@ const products = () => {
       <ExamHeader />
       <LabSection />
       {/* <ProductGallery/> */}
-      <PartnersSection/>
+      <PartnersSection />
       <TestimonialSection />
     </div>
   );

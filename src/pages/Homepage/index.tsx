@@ -1,30 +1,40 @@
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import HomeBanner from "../../components/Banner/homeBanner";
 import ServiceSection from "../../components/ServicePageComponent/ServiceSection";
-import Categories from "../../components/Categories";
-import ProductSection from "../../components/ProductSection";
-// import TeamSection from "../../components/TeamSection";
-import TestimonialSection from "../../components/TestimonialSection";
+import Categories from "../../components/Gallery";
+import ProductSection from "../../components/ProductRelatedComponent/ProductSection";
+import TestimonialSection from "../../components/TestimonialComponent/TestimonialSection";
 import WhyUs from "../../components/WhyUs";
 import PartnersSection from "../../components/PartnersSection";
-// import ScrollToTopButton from "../../components/ScrollToTopButton";
-
-// import About from "../../components/About";
+import WeatherCard from "../../components/WeatherCard";
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollToId = location.state?.scrollToId;
+    if (scrollToId) {
+      const element = document.getElementById(scrollToId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <div id="home-page">
       <HomeBanner />
-      <ServiceSection />
-      <WhyUs/>
-      {/* <About/> */}
+      <WeatherCard />
+      <div id="home-services">
+        <ServiceSection />
+      </div>
+      <WhyUs />
       <Categories />
       <ProductSection />
-      {/* <TeamSection/> */}
-      <PartnersSection/>
+      <PartnersSection />
       <TestimonialSection />
       {/* <ScrollToTopButton/> */}
     </div>

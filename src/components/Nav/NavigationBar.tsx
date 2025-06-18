@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import useCurrentWeather from "../../hooks/useCurrentWeather";
 
 const Navbar = () => {
+  const { weather, loading, error } = useCurrentWeather(); 
+
   useEffect(() => {
     const topBarHeight = 45;
     const navbar = document.getElementById("main-navbar");
@@ -16,14 +19,18 @@ const Navbar = () => {
       }
     };
 
-    handleScroll(); // Set on initial load
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className="nav-container" onClick={() => console.log("Div clicked!")}>
+    <div
+      id="navigation-bar"
+      className="nav-container"
+      onClick={() => console.log("Div clicked!")}
+    >
       {/* Top bar */}
       <div className="site-top-navbar w-100 bg-powder-blue py-3 px-4 d-flex justify-content-between align-items-center text-nav">
         <a
@@ -34,9 +41,21 @@ const Navbar = () => {
         >
           {/* <h5>Email us at</h5> */}
           <i className="bi bi-envelope me-2"></i>
-          <h5>info@aeirc.org</h5>
+          <h5>info@aeirc.com</h5>
         </a>
-        <div className="d-flex gap-3">
+
+        <div className="d-flex align-items-center gap-3">
+          {/* Weather */}
+          {!loading && weather && (
+            <div className="d-flex align-items-center gap-2">
+              <img
+                src={`https://openweathermap.org/img/wn/${weather.icon}.png`}
+                alt={weather.description}
+                style={{ width: "30px", height: "30px" }}
+              />
+              <span>{weather.temp}°C</span>
+            </div>
+          )}
           <a
             href="https://www.facebook.com/share/1Fg5keFa1e/"
             target="_blank"
@@ -71,7 +90,7 @@ const Navbar = () => {
             <img
               src="/img/logo_AEIRC.png"
               alt="Logo"
-              style={{ width: "120px", height: "auto"}}
+              style={{ width: "120px", height: "auto" }}
             />
           </NavLink>
 

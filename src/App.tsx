@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 // import Navbar from "./components/navbar";
-import Navbar from "./components/NavigationBar";
+import Navbar from "./components/Nav/NavigationBar";
 import Home from "./pages/Homepage";
 import AboutUs from "./pages/AboutUs";
 import OurProducts from "./pages/OurProducts";
@@ -25,6 +25,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   return (

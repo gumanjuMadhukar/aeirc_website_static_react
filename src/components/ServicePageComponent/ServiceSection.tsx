@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { services } from "../../pages/ServicePage/servicesData";
 
-const ServiceSection = () => {
+interface ServiceSectionProps {
+  // sectionId: string;
+}
+
+const ServiceSection: React.FC<ServiceSectionProps> = ({ sectionId }) => {
+  const location = useLocation();
+
   return (
     <div className="container-xxl py-5 service-container">
       <div className="container">
@@ -14,19 +20,18 @@ const ServiceSection = () => {
         <div className="row g-4">
           {services.map((service, index) => (
             <div
+              id={service.id}
               key={index}
               className="col-lg-3 col-sm-6 wow fadeInUp"
-              // data-wow-delay={service.delay}
             >
               <Link
                 to={`/ServiceDetails/${service.id}`}
+                state={{ from: location.pathname, sectionId: service.id }}
                 style={{ textDecoration: "none" }}
               >
                 <div className="service-item service-bg service-hover text-center pt-3 h-[350px] flex flex-col justify-between p-4 shadow-md rounded-lg transition duration-300">
                   <div className="p-4">
-                    <i
-                      className={`fa fa-3x ${service.icon} mb-4`}
-                    ></i>
+                    <i className={`fa fa-3x ${service.icon} mb-4`}></i>
                     <h5 className="mb-3">{service.title}</h5>
                     <p className="text-sm">{service.description}</p>
                   </div>

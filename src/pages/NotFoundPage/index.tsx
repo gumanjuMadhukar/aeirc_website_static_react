@@ -1,5 +1,5 @@
-import NotFound404Header from '../../components/NotFound404Header'
-import NotFoundContent from '../../components/NotFoundContent'
+import NotFound404Header from '../../components/NotFoundComponent/NotFound404Header'
+import NotFoundContent from '../../components/NotFoundComponent/NotFoundContent'
 
 
 const NotFoundHeader = () => {

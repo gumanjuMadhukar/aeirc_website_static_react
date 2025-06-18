@@ -1,17 +1,35 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import AboutHeader from "../../components/AboutPageComponent/AboutHeader";
 import ServiceSection from "../../components/ServicePageComponent/ServiceSection";
 import About from "../../components/AboutPageComponent/About";
-import TeamSection from "../../components/TeamSection";
+import TeamSection from "../../components/TeamComponent/TeamSection";
 import WhyUs from "../../components/WhyUs";
 import PartnersSection from "../../components/PartnersSection";
 
 const AboutUs = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollToId = location.state?.scrollToId;
+    if (scrollToId) {
+      const element = document.getElementById(scrollToId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <div id="about_us-page">
       <AboutHeader />
       <About />
       <WhyUs />
-      <ServiceSection />
+      <div id="about-services">
+        <ServiceSection />
+      </div>
       <PartnersSection />
       <TeamSection />
     </div>

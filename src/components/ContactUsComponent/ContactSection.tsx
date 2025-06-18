@@ -20,9 +20,18 @@ const contactInfo: ContactInfoItem[] = [
   {
     iconClass: "fas fa-envelope-open",
     title: "Email",
-    text: "info@example.com",
+    text: "info@aeirc.com",
   },
 ];
+
+const generateCaptcha = () => {
+  const characters = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  let result = "";
+  for (let i = 0; i < 5; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+};
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -32,6 +41,8 @@ const ContactSection: React.FC = () => {
     message: "",
   });
 
+  const [captchaText, setCaptchaText] = useState(generateCaptcha());
+  const [captchaInput, setCaptchaInput] = useState("");
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [isSending, setIsSending] = useState(false);
 
@@ -50,6 +61,14 @@ const ContactSection: React.FC = () => {
     setIsSending(true);
     setStatusMessage(null);
 
+    if (captchaInput.trim().toUpperCase() !== captchaText) {
+      setStatusMessage("❌ Invalid CAPTCHA. Please try again.");
+      setCaptchaText(generateCaptcha());
+      setCaptchaInput("");
+      setIsSending(false);
+      return;
+    }
+
     try {
       const formBody = new URLSearchParams();
       formBody.append("name", formData.name);
@@ -58,7 +77,6 @@ const ContactSection: React.FC = () => {
       formBody.append("message", formData.message);
 
       const response = await fetch("https://yourdomain.com/contact.php", {
-        //domain name here
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -69,8 +87,10 @@ const ContactSection: React.FC = () => {
       const text = await response.text();
 
       if (response.ok) {
-        setStatusMessage(text || "Message sent successfully!");
+        setStatusMessage("✅ Message sent successfully!");
         setFormData({ name: "", email: "", subject: "", message: "" });
+        setCaptchaText(generateCaptcha());
+        setCaptchaInput("");
       } else {
         setStatusMessage(`Error: ${text}`);
       }
@@ -106,15 +126,19 @@ const ContactSection: React.FC = () => {
                 <div className="ms-3">
                   <h5 className="text-black">{title}</h5>
                   {title === "Email" ? (
-                    <a
-                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${text}&su=Booking%20Request`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-decoration-none d-flex align-items-center text-black"
-                    >
-                      {/* <i className="bi bi-envelope me-2"></i> */}
-                      <span>{text}</span>
-                    </a>
+                    <div className="custom-tooltip-wrapper">
+                      <a
+                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=${text}&su=Booking%20Request`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-decoration-none d-flex align-items-center text-black"
+                      >
+                        <span>{text}</span>
+                      </a>
+                      <span className="custom-tooltip-text">
+                        Email us for booking
+                      </span>
+                    </div>
                   ) : (
                     <p className="mb-0">{text}</p>
                   )}
@@ -124,7 +148,10 @@ const ContactSection: React.FC = () => {
           </div>
 
           {/* Google Maps */}
-          <div className="col-lg-4 col-md-6 g-4 map wow fadeInUp" data-wow-delay="0.3s">
+          <div
+            className="col-lg-4 col-md-6 g-4 map wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.85604596331!2d85.32434121132162!3d27.690843776092727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19cfc621cdf5%3A0xf81f589e0bfe1f46!2sAdvance%20Education%20%26%20Innovative%20Research%20Center%20(AEIRC)!5e0!3m2!1sen!2snp!4v1749118691909!5m2!1sen!2snp"
               width="100%"
@@ -139,7 +166,7 @@ const ContactSection: React.FC = () => {
 
           {/* Contact Form */}
           <div
-            className="col-lg-4 col-md-12 py-5 wow fadeInUp"
+            className="col-lg-4 col-md-12 py-5 contact-form wow fadeInUp"
             data-wow-delay="0.5s"
           >
             <form onSubmit={handleSubmit}>
@@ -199,6 +226,37 @@ const ContactSection: React.FC = () => {
                     <label htmlFor="message">Message</label>
                   </div>
                 </div>
+
+                {/* CAPTCHA */}
+                <div className="col-12">
+                  <div className="captcha-container p-3 bg-light rounded">
+                    <div className="d-flex justify-content-between align-items-center mb-2">
+                      <strong className="captcha-code bg-white border px-3 py-2 rounded">
+                        {captchaText}
+                      </strong>
+                      <button
+                        type="button"
+                        className="btn btn-custom btn-sm"
+                        onClick={() => setCaptchaText(generateCaptcha())}
+                      >
+                        Reload
+                      </button>
+                    </div>
+                    <div className="form-floating">
+                      <input
+                        type="text"
+                        id="captcha"
+                        className="form-control"
+                        placeholder="Enter Captcha"
+                        value={captchaInput}
+                        onChange={(e) => setCaptchaInput(e.target.value)}
+                        required
+                      />
+                      <label htmlFor="captcha">Enter Captcha</label>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="col-12 btn-floating">
                   <button
                     className="btn btn-custom w-100 py-3"

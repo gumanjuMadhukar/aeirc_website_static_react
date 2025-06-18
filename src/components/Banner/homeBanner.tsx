@@ -15,19 +15,19 @@ interface Slide {
 const slides: Slide[] = [
   {
     src: "/img/Banner/caurosel-1.jpg",
-    alt: "Slide 1",
-    caption: "Our Exam Lab",
-    description: "Certified CBT lab offering secure and standardized testing services with advanced infrastructure.",
-    buttonText: "Explore Lab",
-    buttonLink: "/courses",
-  },
-  {
-    src: "/img/Banner/caurosel-2.jpg",
     alt: "Slide 2",
     caption: "Our Services",
     description: "Bridging tech, health, and education through software, hosting, telemedicine, AI, and IT consulting.",
     buttonText: "View Progress",
     buttonLink: "/progress",
+  },
+  {
+    src: "/img/Banner/caurosel-2.jpg",
+    alt: "Slide 1",
+    caption: "Our Exam Lab",
+    description: "Certified CBT lab offering secure and standardized testing services with advanced infrastructure.",
+    buttonText: "Explore Lab",
+    buttonLink: "/courses",
   },
   {
     src: "/img/Banner/caurosel-3.jpg",

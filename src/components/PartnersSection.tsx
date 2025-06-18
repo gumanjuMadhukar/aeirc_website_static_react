@@ -9,7 +9,7 @@ const national = [
   },
   { src: "/img/partners/national/Nepalinstitute.jpg", alt: "Nepalinstitute" },
   {
-    src: "public/img/partners/national/Clamphook .png",
+    src: "/img/partners/national/Clamphook .png",
     alt: "Clamphook Entrance Preparation",
   },
   { src: "/img/partners/national/NPC.png", alt: "Nepal Pharmacy Council" },

@@ -1,14 +1,28 @@
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { services } from "./servicesData";
 import ServiceHeader from "../../components/ServicePageComponent/ServiceHeader";
-// import { useEffect } from "react";
 
 const Details = () => {
   const { id } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const fromPath = location.state?.from || "/services";
+const sectionId = location.state?.sectionId || null;
+
+  // const from = location.state?.from || "/services"; 
+
   const service = services.find((s) => s.id === id);
-  // useEffect(() => {
-  //   window.scrollTo({ top: 0, behavior: "smooth" });
-  // }, [id]); // 👈 This triggers scroll when `id` changes
+
+  useEffect(() => {
+    const element = document.getElementById("navigation-bar");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [id]);
 
   if (!service) {
     return (
@@ -66,9 +80,14 @@ const Details = () => {
                 )}
 
                 {/* Back or CTA button */}
-                <a className="btn btn-custom py-3 px-5 mt-2" href="/">
-                  Back to Services
-                </a>
+                <button
+  className="btn btn-custom py-3 px-5 mt-2"
+  onClick={() => {
+    navigate(fromPath, { state: { scrollToId: sectionId } });
+  }}
+>
+  Back to Services
+</button>
               </div>
             </div>
           </div>

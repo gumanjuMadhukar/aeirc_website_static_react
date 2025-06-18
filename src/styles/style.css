@@ -48,6 +48,7 @@
       }
     }
   }
+ 
   /* .navbar-nav{
         a:last-of-type{
             background: #000;
@@ -486,6 +487,47 @@
   background: var(--primary);
   border-color: var(--primary);
 }
+
+/*** ToolTip ***/
+.custom-tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-tooltip-text {
+  visibility: hidden;
+  background-color: #375b8b;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 80%; 
+  left: 150%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.custom-tooltip-wrapper:hover .custom-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*** contact ***/
+.contact-form{
+    padding-top: 0rem !important;
+    padding-bottom: 3rem !important;
+}
+.captcha-code {
+  font-family: "Courier New", monospace;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  user-select: none;
+}
+
 
 /*** Footer ***/
 .footer .btn.btn-social {
