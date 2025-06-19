@@ -56,10 +56,10 @@ const WhyUs: React.FC = () => {
   const [activeId, setActiveId] = useState<string>("one");
 
   return (
-    <div className="container-xxl py-5">
+    <div className="py-5 whyus-section">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 className="section-title bg-white text-center text-highlight px-3">
+          <h6 className="section-title text-white  text-center text-highlight px-3">
             WHY US?
           </h6>
           <h1 className="mb-5">Why Choose AEIRC</h1>
