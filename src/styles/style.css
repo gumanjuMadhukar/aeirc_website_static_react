@@ -6,7 +6,7 @@
   --dark: #375b8b;
 }
 .bg-powder-blue,
-.bg-powder-blue .accordion-button {
+.bg-powder-blue  {
   /* background-color: #06bbcc !important; */
   /* background-color: #4f6c94 !important; */
   background-color: #0082be !important;
@@ -33,11 +33,11 @@
 }
 .service-bg {
   background-color: #e9f1fc !important;
-  color: #375b8b !important;
+  color: var(--secondary)!important;
 }
 
 .service-hover:hover {
-  background-color: #375b8b !important;
+  background-color: var(--secondary) !important;
   /* color:white; */
 }
 
@@ -45,7 +45,11 @@
   position: fixed;
   width: 100%;
   z-index: 999;
+  background: rgb(0, 0, 0,0.35);
+  /* background: linear-gradient(to bottom, #000,#ffffff00) ; */
   .site-top-navbar {
+    /* background: var(--secondary); */
+    
     > a {
       h5 {
         margin-bottom: 0;
@@ -59,13 +63,11 @@
     }
   }
 }
-/* .site-top-navbar {
-    height: 45px;
-} */
+
 .site-navbar {
     width: 100%;
     padding: 10px 50px;
-    background: linear-gradient(to bottom,#0082be,#ffffff00);
+    /* background: linear-gradient(to bottom,#0082be,#ffffff00); */
 }
 
 .bg-site-primary {
@@ -191,14 +193,57 @@
   outline: none;
 }
 
+.navbar .nav-link{
+  color: var(--primary);
+  
+}
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
   color: var(--primary);
 }
 /* whyus-section */
 .whyus-section{
-  background: var(--secondary);
+  h1{
+    color: var(--primary)
+  }
+      .accordion {
+        --bs-accordion-bg: #030f333d !important;
+    }
+
+  .accordion-button{
+    color: var(--primary);
+    background-color: #0082be41 !important;
+  }
+   .accordion-body{
+    padding-left: 50px;
+   }
+  .bg-whyus-blue{
+    background-color: #005d859f !important;
+    color: #ffffff;
+  }
+  .section-container{
+    position: relative;
+    height: 750px;
+    padding: 3rem   0;
+    margin: auto;
+    .img-container, .text-container{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text-container{
+      z-index: 6;
+      padding: 3rem 6rem;
+    }
+  }
 }
+
 
 #home-page {
 }
@@ -219,7 +264,7 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: var(--dark);
+  color: var(--primary);
   font-weight: 500;
 }
 
@@ -350,7 +395,7 @@
   height: 2px;
   top: 4px;
   left: -40px;
-  background: var(--primary);
+  /* background: var(--primary); */
   z-index: -1;
 }
 
@@ -361,7 +406,7 @@
   height: 2px;
   bottom: 5px;
   left: -60px;
-  background: var(--primary);
+  /* background: var(--primary); */
   z-index: -1;
 }
 

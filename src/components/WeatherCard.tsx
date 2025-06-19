@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/WeatherCard.css";
 
 interface ForecastItem {
@@ -26,8 +26,8 @@ const WeatherCard5Day = () => {
   const [error, setError] = useState("");
 
   const API_KEY = "84f8db5e2862e7c82240f2abba2cac3a";
-  const LAT = 27.7172;
-  const LON = 85.324;
+  const LAT = -36.848461;
+  const LON = 174.763336;
 
   useEffect(() => {
     const fetchForecast = async () => {
