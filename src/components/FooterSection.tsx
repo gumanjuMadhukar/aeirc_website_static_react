@@ -48,7 +48,7 @@ const FooterSection: React.FC = () => {
             <p className="mb-2">
               <span className="custom-tooltip-wrapper">
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.org&su=Booking%20Request"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.com&su=Booking%20Request"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-nav text-decoration-none d-flex align-items-center"

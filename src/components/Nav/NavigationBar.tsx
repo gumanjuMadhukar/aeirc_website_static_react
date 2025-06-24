@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import useCurrentWeather from "../../hooks/useCurrentWeather";
 
 const Navbar = () => {
-  const { weather, loading, error } = useCurrentWeather(); 
+  const { weather, loading } = useCurrentWeather(); 
 
   useEffect(() => {
     const topBarHeight = 45;
@@ -32,9 +32,9 @@ const Navbar = () => {
       onClick={() => console.log("Div clicked!")}
     >
       {/* Top bar */}
-      <div className="site-top-navbar w-100 bg-powder-blue py-3 px-4 d-flex justify-content-between align-items-center text-nav">
+      <div className="site-top-navbar w-100 px-4 d-flex justify-content-between align-items-center text-nav">
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.org&su=Booking%20Request"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.com&su=Booking%20Request"
           target="_blank"
           rel="noopener noreferrer"
           className="text-nav text-decoration-none d-flex align-items-center"
@@ -77,7 +77,7 @@ const Navbar = () => {
 
       {/* Main navbar */}
       <div className="container-fluid site-navbar ">
-        <nav className=" navbar navbar-expand-lg bg-white navbar-light m-0 p-0">
+        <nav className=" navbar navbar-expand-lg m-0 p-0">
           <NavLink
             to="/"
             end
@@ -90,7 +90,7 @@ const Navbar = () => {
             <img
               src="/img/logo_AEIRC.png"
               alt="Logo"
-              style={{ width: "120px", height: "auto" }}
+              style={{ width: "120px", height: "auto" , filter:"invert(1)"}}
             />
           </NavLink>
 
