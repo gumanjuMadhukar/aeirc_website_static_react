@@ -21,6 +21,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp@216.14.124.9
-        username: cloudtech
-        password: Vikes@9840
+        server: sftp.216.14.124.9:2223
+        username: ${{ secrets.username }}
+        password: ${{ secrets.password }}
+        local-dir: build
+        server-dir: /home/cloudtech/aeirc.tech
