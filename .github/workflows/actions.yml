@@ -21,7 +21,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: sftp.216.14.124
+        server: sftp.216.14.124.9
         port: 2223
         username: cloudtech
         password: AEIRC@1234-Nepal
