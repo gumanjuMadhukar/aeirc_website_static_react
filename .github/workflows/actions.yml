@@ -25,4 +25,4 @@ jobs:
         username: cloudtech
         password: AEIRC@1234-Nepal
         local-dir: ./
-        server-dir: /home/cloudtech/aeirc.tech
+        server-dir: /home/cloudtech/aeirc.tech/
