@@ -19,12 +19,11 @@ jobs:
         npm run build
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: appleboy/sftp-action@v0.1.3
       with:
         server: 216.14.124.9
-        protocol: sftp
         port: 2223
         username: cloudtech
         password: AEIRC@1234-Nepal
-        local-dir: ./
-        server-dir: /home/cloudtech/aeirc.tech/
+        source: ./
+        target: /home/cloudtech/aeirc.tech/
