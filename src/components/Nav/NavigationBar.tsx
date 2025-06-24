@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import useCurrentWeather from "../../hooks/useCurrentWeather";
 
 const Navbar = () => {
-  const { weather, loading, error } = useCurrentWeather(); 
+  const { weather, loading } = useCurrentWeather(); 
 
   useEffect(() => {
     const topBarHeight = 45;
@@ -32,7 +32,7 @@ const Navbar = () => {
       onClick={() => console.log("Div clicked!")}
     >
       {/* Top bar */}
-      <div className="site-top-navbar w-100 bg-powder-blue py-3 px-4 d-flex justify-content-between align-items-center text-nav">
+      <div className="site-top-navbar w-100 px-4 d-flex justify-content-between align-items-center text-nav">
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.com&su=Booking%20Request"
           target="_blank"

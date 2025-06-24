@@ -1,11 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { services } from "../../pages/ServicePage/servicesData";
 
-interface ServiceSectionProps {
-  // sectionId: string;
-}
-
-const ServiceSection: React.FC<ServiceSectionProps> = ({ sectionId }) => {
+const ServiceSection = () => {
   const location = useLocation();
 
   return (
