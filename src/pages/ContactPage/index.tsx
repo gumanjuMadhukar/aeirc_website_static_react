@@ -1,5 +1,5 @@
-import ContactHeader from '../../components/ContactUsComponent/ContactHeader'
-import ContactSection from '../../components/ContactUsComponent/ContactSection'
+import ContactHeader from '../../components/ContactUs/ContactHeader'
+import ContactSection from '../../components/ContactUs/ContactSection'
 
 const index = () => {
   return (

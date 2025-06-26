@@ -30,7 +30,7 @@ const LabSection: React.FC = () => {
   ];
 
   return (
-    <div className="container-xxl py-5">
+    <div className="py-5 product-section">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
           <h6 className="section-title bg-white text-center text-highlight px-3">

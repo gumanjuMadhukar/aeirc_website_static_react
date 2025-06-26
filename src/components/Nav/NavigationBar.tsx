@@ -41,7 +41,7 @@ const Navbar = () => {
         >
           {/* <h5>Email us at</h5> */}
           <i className="bi bi-envelope me-2"></i>
-          <h5>info@aeirc.com</h5>
+          <p>info@aeirc.com</p>
         </a>
 
         <div className="d-flex align-items-center gap-3">

@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import HomeBanner from "../../components/Banner/homeBanner";
-import ServiceSection from "../../components/ServicePageComponent/ServiceSection";
+import ServiceSection from "../../components/Service/ServiceSection";
 import Categories from "../../components/Gallery";
-import ProductSection from "../../components/ProductRelatedComponent/ProductSection";
-import TestimonialSection from "../../components/TestimonialComponent/TestimonialSection";
+import ProductSection from "../../components/Product/ProductSection";
+// import TestimonialSection from "../../components/TestimonialComponent/TestimonialSection";
 import WhyUs from "../../components/WhyUs";
 import PartnersSection from "../../components/PartnersSection";
 import WeatherCard from "../../components/WeatherCard";
@@ -35,7 +35,7 @@ const Home = () => {
       <Categories />
       <ProductSection />
       <PartnersSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       {/* <ScrollToTopButton/> */}
     </div>
   );

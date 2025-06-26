@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import AboutHeader from "../../components/AboutPageComponent/AboutHeader";
-import ServiceSection from "../../components/ServicePageComponent/ServiceSection";
-import About from "../../components/AboutPageComponent/About";
-import TeamSection from "../../components/TeamComponent/TeamSection";
+import AboutHeader from "../../components/About/AboutHeader";
+import ServiceSection from "../../components/Service/ServiceSection";
+import About from "../../components/About/About";
+import TeamSection from "../../components/Team/TeamSection";
 import WhyUs from "../../components/WhyUs";
 import PartnersSection from "../../components/PartnersSection";
 

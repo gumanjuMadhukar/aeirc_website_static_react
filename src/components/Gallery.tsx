@@ -22,8 +22,8 @@ const Categories = () => {
                     className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
                   >
-                    <h5 className="m-0">Our Lab</h5>
-                    <small className="text-highlight">100 Computers</small>
+                    <h5 className="m-0">Our ExamLab</h5>
+                    {/* <small className="text-highlight">100 Computers</small> */}
                   </div>
                 </a>
               </div>
@@ -36,8 +36,8 @@ const Categories = () => {
                     className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
                   >
-                    <h5 className="m-0">Our Lab</h5>
-                    <small className="text-highlight">49 Computers</small>
+                    <h5 className="m-0">Our ExamLab</h5>
+                    {/* <small className="text-highlight">49 Computers</small> */}
                   </div>
                 </a>
               </div>
@@ -50,7 +50,7 @@ const Categories = () => {
                     className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
                   >
-                    <h5 className="m-0">Exam Hall</h5>
+                    <h5 className="m-0">Our ExamLab</h5>
                     <small className="text-highlight"></small>
                   </div>
                 </a>

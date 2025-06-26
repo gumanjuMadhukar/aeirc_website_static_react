@@ -42,6 +42,17 @@
 }
 
 .nav-container {
+  .site-top-navbar{
+    p{
+      margin-bottom:0;
+    }
+  }
+  .nav-link{
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 20px;
+    letter-spacing: 1.1px;
+  }
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -208,6 +219,8 @@ button:hover {
 .navbar-light .navbar-nav .nav-link.active {
   color: var(--primary);
 }
+
+
 /* whyus-section */
 .whyus-section{
   h1{
@@ -253,7 +266,35 @@ button:hover {
 
 
 #home-page {
+  #home-banner{
+    .carousel-slider{
+      .text-content{
+        h2{
+          font-size : 52px !important;
+          margin: 0;
+
+        }
+        p{
+          font-size: 22px !important;
+        }
+      }
+    }
+  }
+  .product-section{
+    background-color: var(--light);
+  }
+
 }
+
+/* common-section */
+
+  .service-container{
+    p{
+      color: #5282be;
+    }
+  }
+/* common-section ends */
+
 @media (max-width: 991.98px) {
   .navbar-light .navbar-nav .nav-link {
     margin-right: 0;

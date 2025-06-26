@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import ServiceHeader from "../../components/ServicePageComponent/ServiceHeader";
-import ServiceSection from "../../components/ServicePageComponent/ServiceSection";
+import ServiceHeader from "../../components/Service/ServiceHeader";
+import ServiceSection from "../../components/Service/ServiceSection";
 
 const ServicePage = () => {
   const location = useLocation();
@@ -22,7 +22,7 @@ const ServicePage = () => {
     <div id="service-page">
       <ServiceHeader />
       <div id="service-services">
-        <ServiceSection/>
+        <ServiceSection />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
-import TestimonialSection from "../../components/TestimonialComponent/TestimonialSection";
-import TestimonialHeader from "../../components/TestimonialComponent/TestimonialHeader";
+import TestimonialSection from "../../components/Testimonial/TestimonialSection";
+import TestimonialHeader from "../../components/Testimonial/TestimonialHeader";
 
 const Testimonial = () => {
   return (

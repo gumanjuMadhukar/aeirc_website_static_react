@@ -1,8 +1,19 @@
-body, html, #root {
+body,
+html,
+#root {
   height: 100%;
   margin: 0;
   overflow-x: hidden;
   /* box-sizing: border-box; */
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 100;
+  font-style: normal;
+  p {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 a {
   text-decoration: none !important;
@@ -31,12 +42,8 @@ main {
   /* bottom: 0; */
   /* left: 0; */
   width: 100%;
-  z-index: 100; 
-  background-color: #212529; 
+  z-index: 100;
+  background-color: #212529;
   color: #fff;
   padding: 1rem 0;
 }
-
-
-
-

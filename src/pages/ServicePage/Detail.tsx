@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { services } from "./servicesData";
-import ServiceHeader from "../../components/ServicePageComponent/ServiceHeader";
+import ServiceHeader from "../../components/Service/ServiceHeader";
 
 const Details = () => {
   const { id } = useParams();
@@ -9,9 +9,9 @@ const Details = () => {
   const navigate = useNavigate();
 
   const fromPath = location.state?.from || "/services";
-const sectionId = location.state?.sectionId || null;
+  const sectionId = location.state?.sectionId || null;
 
-  // const from = location.state?.from || "/services"; 
+  // const from = location.state?.from || "/services";
 
   const service = services.find((s) => s.id === id);
 
@@ -81,13 +81,13 @@ const sectionId = location.state?.sectionId || null;
 
                 {/* Back or CTA button */}
                 <button
-  className="btn btn-custom py-3 px-5 mt-2"
-  onClick={() => {
-    navigate(fromPath, { state: { scrollToId: sectionId } });
-  }}
->
-  Back to Services
-</button>
+                  className="btn btn-custom py-3 px-5 mt-2"
+                  onClick={() => {
+                    navigate(fromPath, { state: { scrollToId: sectionId } });
+                  }}
+                >
+                  Back to Services
+                </button>
               </div>
             </div>
           </div>

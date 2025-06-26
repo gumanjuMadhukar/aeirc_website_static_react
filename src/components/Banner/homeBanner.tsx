@@ -121,6 +121,7 @@ const HomeBanner: React.FC = () => {
                 }}
               >
                 <div
+                 className="text-content"
                   style={{
                     maxWidth: "600px",
                     textAlign: "left",
@@ -130,12 +131,12 @@ const HomeBanner: React.FC = () => {
                   }}
                 >
                   {slide.caption && (
-                    <h2 style={{ fontSize: "2.5rem", margin: 0 }}>
+                    <h2>
                       {slide.caption}
                     </h2>
                   )}
                   {slide.description && (
-                    <p style={{ fontSize: "1.1rem", margin: 0 }}>
+                    <p>
                       {slide.description}
                     </p>
                   )}
