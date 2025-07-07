@@ -2,7 +2,10 @@
 .carousel.carousel-slider .control-arrow:before {
   margin: 0 40px;
 }
-
+.carousel .control-dots .dot{
+  width: 12px;
+  height: 12px;
+}
 @media (max-width: 1025px) {
   .carousel .control-arrow:before,
   .carousel.carousel-slider .control-arrow:before {

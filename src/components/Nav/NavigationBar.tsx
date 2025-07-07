@@ -32,7 +32,7 @@ const Navbar = () => {
       onClick={() => console.log("Div clicked!")}
     >
       {/* Top bar */}
-      <div className="site-top-navbar w-100 px-4 d-flex justify-content-between align-items-center text-nav">
+      <div className="site-top-navbar w-100 d-flex justify-content-between align-items-center text-nav">
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.com&su=Booking%20Request"
           target="_blank"
@@ -95,7 +95,7 @@ const Navbar = () => {
           </NavLink>
 
           <button
-            className="navbar-toggler me-4"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarCollapse"

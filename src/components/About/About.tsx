@@ -10,10 +10,10 @@ const About = () => {
               data-wow-delay="0.1s"
               style={{ minHeight: "400px" }}
             >
-              <div className="position-relative h-100">
+              <div className="position-relative h-100 zoom-container">
                 <img
-                  className="img-fluid position-absolute w-100 h-100"
-                  src="img/about.jpg"
+                  className="img-fluid position-absolute w-100 h-100 zoom-image"
+                  src="img/whatsapp/Reception.jpg"
                   alt="About"
                   style={{ objectFit: "cover" }}
                 />
@@ -65,10 +65,10 @@ const About = () => {
                 ))}
               </div>
 
-              {/* Read More Button */}
+              {/* Read More Button
               <a className="btn btn-custom py-3 px-5 mt-2" href="/about">
                 Read More
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

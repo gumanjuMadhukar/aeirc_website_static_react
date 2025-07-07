@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,22 +8,24 @@ function ScrollToTopButton() {
       setIsVisible(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     isVisible && (
       <button
+        type="button"
+        className="btn btn-scroll rounded-circle position-fixed scroll-to-top-btn"
         onClick={scrollToTop}
+        aria-label="Scroll to top"
         title="Go to top"
-        className="fixed bottom-5 right-5 bg-red-600 text-white text-lg p-4 rounded-full shadow-lg hover:bg-red-700 transition duration-300 z-50"
       >
-        <i className="fas fa-arrow-up" />
+        <i className="fas fa-arrow-up"></i>
       </button>
     )
   );

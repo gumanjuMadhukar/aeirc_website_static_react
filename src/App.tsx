@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
 // import Navbar from "./components/navbar";
 import Navbar from "./components/Nav/NavigationBar";
 import Home from "./pages/Homepage";
@@ -11,6 +10,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
 import Details from "./pages/ServicePage/Detail";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import FooterSection from "./components/FooterSection";
 
 
@@ -30,7 +30,6 @@ import "slick-carousel/slick/slick-theme.css";
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -44,6 +43,7 @@ function App() {
         <Route path="/services/:id" element={<Details />} />
         <Route path="/ServiceDetails/:id" element={<Details />} />
       </Routes>
+      <ScrollToTopButton/>
       <FooterSection />
     </BrowserRouter>
   );

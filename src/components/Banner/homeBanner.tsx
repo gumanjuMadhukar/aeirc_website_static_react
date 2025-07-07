@@ -14,10 +14,11 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    src: "/img/Banner/caurosel-1.jpg",
+    src: "/img/whatsapp/lab2_img.jpg",
     alt: "Slide 2",
     caption: "Our Services",
-    description: "Bridging tech, health, and education through software, hosting, telemedicine, AI, and IT consulting.",
+    description:
+      "Bridging tech, health, and education through software, hosting, telemedicine, AI, and IT consulting.",
     buttonText: "View Progress",
     buttonLink: "/progress",
   },
@@ -25,23 +26,28 @@ const slides: Slide[] = [
     src: "/img/Banner/caurosel-2.jpg",
     alt: "Slide 1",
     caption: "Our Exam Lab",
-    description: "Certified CBT lab offering secure and standardized testing services with advanced infrastructure.",
+    description:
+      "Certified CBT lab offering secure and standardized testing services with advanced infrastructure.",
     buttonText: "Explore Lab",
     buttonLink: "/courses",
   },
+ {
+  src: "/img/whatsapp/HR_Office.jpg", 
+  // src: "/img/whatsapp/HR.jpg", 
+  alt: "HR Office",
+  caption: "Our Office Space",
+  description:
+    "A glimpse into our modern office where innovation and collaboration meet. Meet our HR in action.",
+  buttonText: "Meet Our Team",
+  buttonLink: "/about",
+},
+
   {
-    src: "/img/Banner/caurosel-3.jpg",
-    alt: "Slide 3",
-    caption: "News",
-    description: "Explore our latest innovations, project updates, and contributions to Nepal’s tech-driven future.",
-    buttonText: "Start Test",
-    buttonLink: "/mock-tests",
-  },
-  {
-    src: "/img/Banner/caurosel-5.jpg",
+    src: "/img/whatsapp/lab1_img.jpg",
     alt: "Slide 4",
     caption: "Our Operations",
-    description: "Driven by ISO, GDPR, and national standards to ensure secure, high-quality, and reliable services.",
+    description:
+      "Driven by ISO, GDPR, and national standards to ensure secure, high-quality, and reliable services.",
     buttonText: "Contact Us",
     buttonLink: "/contact",
   },
@@ -49,7 +55,8 @@ const slides: Slide[] = [
 
 const HomeBanner: React.FC = () => {
   return (
-    <div id="home-banner"
+    <div
+      id="home-banner"
       style={{
         width: "100vw",
         height: "80vh",
@@ -73,7 +80,7 @@ const HomeBanner: React.FC = () => {
             key={index}
             style={{
               width: "100%",
-              height: "80vh", 
+              height: "80vh",
               position: "relative",
             }}
           >
@@ -83,7 +90,7 @@ const HomeBanner: React.FC = () => {
               style={{
                 width: "100%",
                 height: "100%",
-                objectFit: "cover", 
+                objectFit: "cover",
                 display: "block",
                 margin: "0 auto",
                 // backgroundColor: "#ffffff",
@@ -95,16 +102,18 @@ const HomeBanner: React.FC = () => {
                 top: 0,
                 left: 0,
                 width: "100%",
-                height: "80vh", 
-                backgroundColor: "rgba(0, 0, 0, 0.1)",
+                height: "80vh",
+                background: "linear-gradient(#00000027 , rgba(0,0,0,0.35))",
                 display: "flex",
                 alignItems: "center",
                 paddingLeft: "40px",
                 boxSizing: "border-box",
                 color: "white",
               }}
+              className="banner-container"
             >
-              <div className="banner-padding"
+              <div
+                className="banner-padding"
                 style={{
                   position: "absolute",
                   top: 0,
@@ -115,13 +124,13 @@ const HomeBanner: React.FC = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "flex-start",
-                  padding: "0 8rem",
+                  padding: "0 20px 0 100px",
                   boxSizing: "border-box",
                   color: "white",
                 }}
               >
                 <div
-                 className="text-content"
+                  className="text-content"
                   style={{
                     maxWidth: "600px",
                     textAlign: "left",
@@ -130,16 +139,8 @@ const HomeBanner: React.FC = () => {
                     gap: "1rem",
                   }}
                 >
-                  {slide.caption && (
-                    <h2>
-                      {slide.caption}
-                    </h2>
-                  )}
-                  {slide.description && (
-                    <p>
-                      {slide.description}
-                    </p>
-                  )}
+                  {slide.caption && <h2>{slide.caption}</h2>}
+                  {slide.description && <p>{slide.description}</p>}
                   {/* {slide.buttonText && slide.buttonLink && (
                     <a
                       href={slide.buttonLink}

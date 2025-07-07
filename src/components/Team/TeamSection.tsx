@@ -4,7 +4,7 @@ const instructors = [
   {
     name: 'Name',
     designation: 'Designation',
-    image: '/img/Team/team-1.jpg',
+    image: '/img/Team/dummy.jpg',
     facebook: '#',
     twitter: '#',
     instagram: '#',
@@ -13,7 +13,7 @@ const instructors = [
   {
     name: 'Name',
     designation: 'Designation',
-    image: '/img/Team/team-2.jpg',
+    image: '/img/Team/dummy.jpg',
     facebook: '#',
     twitter: '#',
     instagram: '#',
@@ -22,7 +22,7 @@ const instructors = [
   {
     name: 'Name',
     designation: 'Designation',
-    image: '/img/Team/team-3.jpg',
+    image: '/img/Team/dummy.jpg',
     facebook: '#',
     twitter: '#',
     instagram: '#',
@@ -31,7 +31,7 @@ const instructors = [
   {
     name: 'Name',
     designation: 'Designation',
-    image: '/img/Team/team-3.jpg',
+    image: '/img/Team/dummy.jpg',
     facebook: '#',
     twitter: '#',
     instagram: '#',

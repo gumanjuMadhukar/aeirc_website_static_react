@@ -55,60 +55,62 @@ const WhyUs: React.FC = () => {
   const [activeId, setActiveId] = useState<string>("one");
 
   return (
-    <div className="py-5 whyus-section">
-      <div className="section-container">
-        <div className="img-container">
+    <div className="container py-5">
+      <div className="py-5 whyus-section">
+        <div className="section-container">
+          {/* <div className="img-container">
           <img src="/img/AEIRC_Reception.jpg" alt="" />
-        </div>
-        <div className="text-container">
-          <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 className="section-title text-white text-center text-highlight px-3">
-              WHY US?
-            </h6>
-            <h1 className="mb-5">Why Choose AEIRC</h1>
-          </div>
+        </div> */}
+          <div className="text-container">
+            <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+              <h6 className="section-title text-center text-highlight px-3">
+                WHY US?
+              </h6>
+              <h1 className="mb-5 text-dark">Why Choose AEIRC</h1>
+            </div>
 
-          <div className="accordion" id="accordionExample">
-            {accordionData.map((item) => {
-              const collapseId = `collapse${item.id}`;
-              const headingId = `heading${item.id}`;
-              const isActive = activeId === item.id;
+            <div className="accordion" id="accordionExample">
+              {accordionData.map((item) => {
+                const collapseId = `collapse${item.id}`;
+                const headingId = `heading${item.id}`;
+                const isActive = activeId === item.id;
 
-              return (
-                <div
-                  className={`accordion-item ${
-                    isActive ? "bg-whyus-blue" : ""
-                  }`}
-                  key={item.id}
-                >
-                  <h2 className="accordion-header" id={headingId}>
-                    <button
-                      className={`accordion-button ${
-                        !isActive ? "collapsed" : ""
-                      }`}
-                      type="button"
-                      onClick={() => setActiveId(isActive ? "" : item.id)}
-                      data-bs-toggle="collapse"
-                      data-bs-target={`#${collapseId}`}
-                      aria-expanded={isActive}
-                      aria-controls={collapseId}
-                    >
-                      <strong>{item.title}</strong>
-                    </button>
-                  </h2>
+                return (
                   <div
-                    id={collapseId}
-                    className={`accordion-collapse collapse ${
-                      isActive ? "show" : ""
+                    className={`accordion-item ${
+                      isActive ? "bg-whyus-blue" : ""
                     }`}
-                    aria-labelledby={headingId}
-                    data-bs-parent="#0d5a5aordionExample"
+                    key={item.id}
                   >
-                    <div className="accordion-body">{item.content}</div>
+                    <h2 className="accordion-header" id={headingId}>
+                      <button
+                        className={`accordion-button ${
+                          !isActive ? "collapsed" : ""
+                        }`}
+                        type="button"
+                        onClick={() => setActiveId(isActive ? "" : item.id)}
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#${collapseId}`}
+                        aria-expanded={isActive}
+                        aria-controls={collapseId}
+                      >
+                        <strong>{item.title}</strong>
+                      </button>
+                    </h2>
+                    <div
+                      id={collapseId}
+                      className={`accordion-collapse collapse ${
+                        isActive ? "show" : ""
+                      }`}
+                      aria-labelledby={headingId}
+                      data-bs-parent="#003d3dordionExample"
+                    >
+                      <div className="accordion-body">{item.content}</div>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

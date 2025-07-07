@@ -2,7 +2,7 @@ const FooterSection: React.FC = () => {
   return (
     <div
       id="footer-page"
-      className="container-fluid text-dark footer pt-5 mt-5 wow fadeIn"
+      className="container-fluid text-dark footer mt-5 wow fadeIn"
       style={{ backgroundColor: "#e9f1fc" }}
       data-wow-delay="0.1s"
     >
@@ -13,14 +13,20 @@ const FooterSection: React.FC = () => {
               src="/img/logo.png"
               alt="aeirc_logo"
               className="img-fluid"
-              style={{ maxWidth: 100, margin: "0", display: "block" }}
+              style={{
+                maxWidth: 100,
+                margin: "0",
+                display: "block",
+                filter:
+                  "invert(32%) sepia(100%) saturate(1373%) hue-rotate(172deg) brightness(85%) contrast(100%)",
+              }}
             />
-            <h3 className="text-dark mb-3">
+            <h3 className="text-secondary mb-3 pt-2">
               Advance Education & Innovative Research Centre Pvt. Ltd.
             </h3>
           </div>
           <div className="col-lg-3 col-md-6">
-            <h4 className="text-dark mb-3">Quick Link</h4>
+            <h4 className="text-secondary mb-3">Quick Link</h4>
             <a className="btn btn-link" href="about">
               About Us
             </a>
@@ -38,11 +44,11 @@ const FooterSection: React.FC = () => {
             </a>
           </div>
           <div className="col-lg-3 col-md-6">
-            <h4 className="text-dark mb-3">Contact</h4>
-            <p className="mb-2">
-              <i className="fas fa-map-marker-alt me-3"></i>Babarmal, Kathmandu
+            <h4 className="text-secondary mb-3">Contact</h4>
+            <p className="mb-2 text-secondary">
+              <i className="fas fa-map-marker-alt me-3 "></i>Babarmal, Kathmandu
             </p>
-            <p className="mb-2">
+            <p className="mb-2 text-secondary">
               <i className="fas fa-phone-alt me-3"></i>9851046500
             </p>
             <p className="mb-2">

@@ -53,74 +53,97 @@ const WeatherCard5Day = () => {
     fetchForecast();
   }, []);
 
-  if (loading) return <div className="text-center mt-5">Loading...</div>;
-  if (error || forecast.length === 0)
-    return (
-      <div className="alert alert-danger mt-5 text-center">
-        {error || "Unable to load weather data."}
-      </div>
-    );
+  if (loading) return null;
+  // <div className="text-center mt-5">Loading...</div>;
+  if (error || forecast.length === 0) return null;
+  // (
+  //     <div className="alert alert-danger mt-5 text-center">
+  //       {error || "Unable to load weather data."}
+  //     </div>
+  //   );
 
   const today = forecast[0];
   const remaining = forecast.slice(1);
 
   return (
-    <div id="weather-card" className="container py-5">
-      {/* <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h6 className="section-title bg-white text-center text-highlight px-3">
-          Services
-        </h6>
-        <h1 className="mb-5">Services Provided By AEIRC</h1>
-      </div> */}
-      <div
-        className="weather-wrapper"
-        style={{
-          backgroundImage: "url('/img/WeatherCard/weather_banner.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-        }}
-      >
-        <div className="weather-overlay">
-          {/* Today Forecast */}
-          <div className="today-forecast-horizontal">
-            <div className="today-icon-wrapper">
-              <div className="today-label">Today</div>{" "}
-              {/* This is the new label */}
-              <img
-                src={`https://openweathermap.org/img/wn/${today.weather[0].icon}@2x.png`}
-                alt={today.weather[0].description}
-                className="today-icon"
-              />
-            </div>
-            <div className="today-right">
-              <div className="today-temp responsive-today-temp">{Math.round(today.main.temp)}°</div>
-              <div className="today-details responsive-today-details">
-                <strong><p>{today.weather[0].description}</p></strong>
-                <p className="hide-after-400"><strong>Wind:</strong> {today.wind.speed} m/s</p>
-                <p className="hide-after-514"><strong>Humidity: </strong>{today.main.humidity}%</p>
+    <div id="weather-card">
+      <div className="container-xxl py-5">
+        <div className="container">
+          <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 className="section-title bg-white text-center text-highlight px-3">
+              Real-Time Weather Monitoring
+            </h6>
+            <h1 className="mb-3">Environment Matters at AEIRC</h1>
+            <p className="mb-5">
+              We ensure our services operate smoothly by keeping track of local
+              weather conditions. Whether it's computer-based testing or field
+              operations, up-to-date weather information helps us plan and
+              deliver with precision.
+            </p>
+          </div>
+          <div
+            className="weather-wrapper"
+            style={{
+              backgroundImage: "url('/img/WeatherCard/weather_banner.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              position: "relative",
+            }}
+          >
+            <div className="weather-overlay">
+              {/* Today Forecast */}
+              <div className="today-forecast-horizontal">
+                <div className="today-icon-wrapper">
+                  <div className="today-label">Today</div>{" "}
+                  {/* This is the new label */}
+                  <img
+                    src={`https://openweathermap.org/img/wn/${today.weather[0].icon}@2x.png`}
+                    alt={today.weather[0].description}
+                    className="today-icon"
+                  />
+                </div>
+                <div className="today-right">
+                  <div className="today-temp responsive-today-temp">
+                    {Math.round(today.main.temp)}°
+                  </div>
+                  <div className="today-details responsive-today-details">
+                    <strong>
+                      <p>{today.weather[0].description}</p>
+                    </strong>
+                    <p className="hide-after-400">
+                      <strong>Wind:</strong> {today.wind.speed} m/s
+                    </p>
+                    <p className="hide-after-514">
+                      <strong>Humidity: </strong>
+                      {today.main.humidity}%
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 5-Day Forecast */}
+              <div className="forecast-list">
+                {remaining.map(({ dt_txt, main, weather }, idx) => {
+                  const dayName = new Date(dt_txt).toLocaleDateString(
+                    undefined,
+                    {
+                      weekday: "short",
+                    }
+                  );
+                  return (
+                    <div className="forecast-item" key={idx}>
+                      <h6>{dayName}</h6>
+                      <img
+                        src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+                        alt={weather[0].description}
+                        className="forecast-icon"
+                      />
+                      <p>{Math.round(main.temp)}°</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-          </div>
-
-          {/* 5-Day Forecast */}
-          <div className="forecast-list">
-            {remaining.map(({ dt_txt, main, weather }, idx) => {
-              const dayName = new Date(dt_txt).toLocaleDateString(undefined, {
-                weekday: "short",
-              });
-              return (
-                <div className="forecast-item" key={idx}>
-                  <h6>{dayName}</h6>
-                  <img
-                    src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
-                    alt={weather[0].description}
-                    className="forecast-icon"
-                  />
-                  <p>{Math.round(main.temp)}°</p>
-                </div>
-              );
-            })}
           </div>
         </div>
       </div>

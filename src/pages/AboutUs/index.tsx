@@ -4,8 +4,10 @@ import AboutHeader from "../../components/About/AboutHeader";
 import ServiceSection from "../../components/Service/ServiceSection";
 import About from "../../components/About/About";
 import TeamSection from "../../components/Team/TeamSection";
-import WhyUs from "../../components/WhyUs";
+// import WhyUs from "../../components/WhyUs";
 import PartnersSection from "../../components/PartnersSection";
+import SmarterAccordion from "../../components/FaqSection";
+import WhyChooseUs from "../../components/WhyChooseUs";
 
 const AboutUs = () => {
   const location = useLocation();
@@ -26,10 +28,11 @@ const AboutUs = () => {
     <div id="about_us-page">
       <AboutHeader />
       <About />
-      <WhyUs />
-      <div id="about-services">
-        <ServiceSection />
-      </div>
+      <ServiceSection />
+      <WhyChooseUs />
+      <SmarterAccordion />
+      {/* <WhyUs /> */}
+      <div id="about-services"></div>
       <PartnersSection />
       <TeamSection />
     </div>

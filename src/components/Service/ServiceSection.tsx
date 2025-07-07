@@ -25,11 +25,25 @@ const ServiceSection = () => {
                 state={{ from: location.pathname, sectionId: service.id }}
                 style={{ textDecoration: "none" }}
               >
-                <div className="service-item service-bg service-hover text-center pt-3 h-[350px] flex flex-col justify-between p-4 shadow-md rounded-lg transition duration-300">
-                  <div className="p-4">
+                <div className="service-item service-bg service-hover text-center h-[350px] flex flex-col justify-between p-4 shadow-md rounded-lg transition duration-300">
+                  <div className="flex flex-col flex-grow">
                     <i className={`fa fa-3x ${service.icon} mb-4`}></i>
-                    <h5 className="mb-3">{service.title}</h5>
-                    <p className="text-sm">{service.description}</p>
+                    <h5 className="mb-3 service-title">{service.title}</h5>
+                    <p className="text-sm line-clamp-3">
+                      {service.description}
+                    </p>
+                    <div className="mt-4">
+                      <Link
+                        to={`/ServiceDetails/${service.id}`}
+                        state={{
+                          from: location.pathname,
+                          sectionId: service.id,
+                        }}
+                        className="btn btn-custom"
+                      >
+                        Read More <i className="fa fas-"></i>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </Link>

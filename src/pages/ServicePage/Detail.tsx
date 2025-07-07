@@ -15,14 +15,17 @@ const Details = () => {
 
   const service = services.find((s) => s.id === id);
 
-  useEffect(() => {
-    const element = document.getElementById("navigation-bar");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+useEffect(() => {
+  const timeout = setTimeout(() => {
+    const detailSection = document.getElementById("detail-page");
+    if (detailSection) {
+      detailSection.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [id]);
+  }, 100);
+  return () => clearTimeout(timeout);
+}, [id]);
 
   if (!service) {
     return (

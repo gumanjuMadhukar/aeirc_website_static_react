@@ -1,6 +1,6 @@
 const Categories = () => {
   return (
-    <div>
+    <div id="gallery-section">
       <div className="container-xxl py-5 category">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -14,43 +14,40 @@ const Categories = () => {
           {/* Left Side */}
           <div className="col-lg-7 col-md-6">
             <div className="row g-3">
-              {/* Web Design */}
               <div className="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                 <a className="position-relative d-block overflow-hidden" href="#">
-                  <img className="img-fluid" src="public/img/AEIRC_Gallery/gallery1.jpg" alt="Web Design" />
+                  <img className="img-fluid" src="public/img/AEIRC_Gallery/gallery1.jpg" alt="hall A" />
                   <div
                     className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
                   >
-                    <h5 className="m-0">Our ExamLab</h5>
+                    <h5 className="m-0">Hall A</h5>
                     {/* <small className="text-highlight">100 Computers</small> */}
                   </div>
                 </a>
               </div>
 
-              {/* Graphic Design */}
               <div className="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                 <a className="position-relative d-block overflow-hidden" href="#">
-                  <img className="img-fluid" src="public/img/AEIRC_Gallery/gallery2.jpg" alt="Graphic Design" />
+                  <img className="img-fluid img-container2" src="/img/lab.jpg" alt="hall B" />
                   <div
                     className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
                   >
-                    <h5 className="m-0">Our ExamLab</h5>
+                    <h5 className="m-0">Hall B</h5>
                     {/* <small className="text-highlight">49 Computers</small> */}
                   </div>
                 </a>
               </div>
 
-              {/* Video Editing */}
               <div className="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                 <a className="position-relative d-block overflow-hidden" href="#">
-                  <img className="img-fluid" src="/img/lab.jpg" alt="Video Editing" />
+                  <img className="img-fluid img-container2" src="/img/whatsapp/labC.jpg" alt="hall C" />
                   <div
                     className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
                   >
-                    <h5 className="m-0">Our ExamLab</h5>
+                    <h5 className="m-0">Hall C</h5>
                     <small className="text-highlight"></small>
                   </div>
                 </a>

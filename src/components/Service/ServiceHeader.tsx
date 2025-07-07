@@ -1,10 +1,11 @@
-const ServiceHeader: React.FC = () => {
+const TeamHeader: React.FC = () => {
   return (
-    <div className="container-fluid bg-site-primary py-5 mb-5 page-header service">
+    <div className="container-fluid 
+     py-5 mb-5 page-header">
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-10 text-center">
-            <h1 className="display-3 text-white animated slideInDown">Our Services</h1>
+            <h1 className="display-3 text-white animated slideInDown">Our Team</h1>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb justify-content-center">
                 <li className="breadcrumb-item">
@@ -14,7 +15,7 @@ const ServiceHeader: React.FC = () => {
                   <a className="text-white" href="#">Pages</a>
                 </li>
                 <li className="breadcrumb-item text-white active" aria-current="page">
-                  Services
+                  Team
                 </li>
               </ol>
             </nav>
@@ -25,4 +26,4 @@ const ServiceHeader: React.FC = () => {
   );
 };
 
-export default ServiceHeader;
+export default TeamHeader;
