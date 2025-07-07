@@ -11,7 +11,7 @@ const ServiceSection = () => {
           <h6 className="section-title bg-white text-center text-highlight px-3">
             Services
           </h6>
-          <h1 className="mb-5">Services Provided By AEIRC</h1>
+          <h1 className="mb-5">Services Provided By US</h1>
         </div>
         <div className="row g-4">
           {services.map((service, index) => (
