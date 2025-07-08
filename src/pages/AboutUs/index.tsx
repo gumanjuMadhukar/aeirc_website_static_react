@@ -5,7 +5,7 @@ import ServiceSection from "../../components/Service/ServiceSection";
 import About from "../../components/About/About";
 import TeamSection from "../../components/Team/TeamSection";
 // import WhyUs from "../../components/WhyUs";
-import PartnersSection from "../../components/PartnersSection";
+import PartnersSection from "../../components/ClientsSection";
 import SmarterAccordion from "../../components/FaqSection";
 import WhyChooseUs from "../../components/WhyChooseUs";
 

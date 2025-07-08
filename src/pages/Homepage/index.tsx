@@ -6,7 +6,7 @@ import Categories from "../../components/Gallery";
 import ProductSection from "../../components/Product/ProductSection";
 // import TestimonialSection from "../../components/TestimonialComponent/TestimonialSection";
 // import WhyUs from "../../components/WhyUs";
-import PartnersSection from "../../components/PartnersSection";
+import ClientsSection from "../../components/ClientsSection";
 import WeatherCard from "../../components/WeatherCard";
 import SmarterAccordion from "../../components/FaqSection";
 import WhyChooseUS from "../../components/WhyChooseUs";
@@ -37,7 +37,7 @@ const Home = () => {
       {/* <WhyUs /> */}
       <ProductSection />
       <Categories />
-      <PartnersSection />
+      <ClientsSection />
       {/* <TestimonialSection /> */}
       <WeatherCard />
       {/* <ScrollToTopButton/> */}

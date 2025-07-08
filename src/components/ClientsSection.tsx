@@ -1,41 +1,41 @@
 const national = [
   {
-    src: "/img/partners/national/NHPC.png",
+    src: "/img/Clients/national/NHPC1.png",
     alt: "Nepal Health Professional Council (NHPC)",
   },
   {
-    src: "/img/partners/national/HIBN.png",
+    src: "/img/Clients/national/HIBN.png",
     alt: "Health Insurance Board of Nepal",
   },
-  { src: "/img/partners/national/Nepalinstitute.jpg", alt: "Nepalinstitute" },
+  { src: "/img/Clients/national/Nepalinstitute.jpg", alt: "Nepalinstitute" },
   {
-    src: "/img/partners/national/Clamphook .png",
+    src: "/img/Clients/national/Clamphook .png",
     alt: "Clamphook Entrance Preparation",
   },
-  { src: "/img/partners/national/NPC.png", alt: "Nepal Pharmacy Council" },
+  { src: "/img/Clients/national/NPC.png", alt: "Nepal Pharmacy Council" },
 ];
 const international = [
   {
-    src: "/img/partners/international/BritishCouncil.png",
+    src: "/img/Clients/international/BritishCouncil.png",
     alt: "British Council",
   },
-  { src: "/img/partners/international/CG.png", alt: "City & Guilds (UK)" },
+  { src: "/img/Clients/international/CG.png", alt: "City & Guilds (UK)" },
   {
-    src: "/img/partners/international/CoreIntegra.png",
+    src: "/img/Clients/international/CoreIntegra.png",
     alt: "Core Integra (India)",
   },
-  { src: "/img/partners/international/jot.png", alt: "JOT (Japan)" },
+  { src: "/img/Clients/international/jot.png", alt: "JOT (Japan)" },
   {
-    src: "/img/partners/international/NTA.png",
+    src: "/img/Clients/international/NTA.png",
     alt: "NTA (India) – JEE Main and JEE Advanced",
   },
   {
-    src: "/img/partners/international/TSC.png",
+    src: "/img/Clients/international/TSC.png",
     alt: "TCS iON (Tata Consultancy Services, India):",
   },
 ];
 
-const PartnersSection = () => {
+const ClientsSection = () => {
   return (
     <div id="client-section">
       <div className="container-xxl py-5">
@@ -52,7 +52,7 @@ const PartnersSection = () => {
             <div className="col-lg-4">
               <h2 className="mb-3 text-highlight">Our National Clients</h2>
               <p>
-                AEIRC has built a strong reputation through partnerships with
+                AEIRC has built a strong reputation through Clientships with
                 leading national organizations. These collaborations showcase
                 our commitment to excellence, adherence to protocols, and
                 capability to manage high-stakes projects within the country.
@@ -85,7 +85,7 @@ const PartnersSection = () => {
               <h2 className="mb-3 text-highlight">Our International Clients</h2>
               <p>
                 In addition to our national success, AEIRC has established
-                impactful partnerships with renowned international institutions.
+                impactful Clientships with renowned international institutions.
                 These global alliances reflect our dedication to innovation,
                 global standards, and collaborative research across borders.
               </p>
@@ -116,4 +116,4 @@ const PartnersSection = () => {
   );
 };
 
-export default PartnersSection;
+export default ClientsSection;

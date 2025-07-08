@@ -506,6 +506,9 @@ button:hover {
 .service-title{
   height: 50px;
 }
+.service-btn{
+  margin-top: 2.5rem !important;
+}
 
 /*** gallery ***/
 #gallery-section {

@@ -1,4 +1,6 @@
-const TeamHeader: React.FC = () => {
+import { Link } from "react-router-dom";
+
+const ServiceHeader: React.FC = () => {
   return (
     <div className="container-fluid 
      py-5 mb-5 page-header">
@@ -9,10 +11,10 @@ const TeamHeader: React.FC = () => {
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb justify-content-center">
                 <li className="breadcrumb-item">
-                  <a className="text-white" href="/">Home</a>
+                  <Link className="text-white" to="/">Home</Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <a className="text-white" href="#">Pages</a>
+                  <Link className="text-white" to="#">Pages</Link>
                 </li>
                 <li className="breadcrumb-item text-white active" aria-current="page">
                   Team
@@ -26,4 +28,4 @@ const TeamHeader: React.FC = () => {
   );
 };
 
-export default TeamHeader;
+export default ServiceHeader;

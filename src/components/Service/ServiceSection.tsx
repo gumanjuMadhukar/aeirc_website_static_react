@@ -32,7 +32,7 @@ const ServiceSection = () => {
                     <p className="text-sm line-clamp-3">
                       {service.description}
                     </p>
-                    <div className="mt-4">
+                    <div className="mt-4 service-btn">
                       <Link
                         to={`/ServiceDetails/${service.id}`}
                         state={{

@@ -1,33 +1,33 @@
 @media (max-width: 2560px) {
   /* #product-page { */
-    .lab-section-row {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    
-    .lab-section-row .custom-left {
-      flex: 0 0 40%;
-      max-width: 40%;
-    }
-    
-    .lab-section-row .custom-right {
-      flex: 0 0 60%;
-      max-width: 60%;
-      padding-left: 2rem;
-    }
-    
-    .product-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    
-    .product-items {
-      flex: 0 0 calc(50% - 0.5rem);
-      max-width: calc(50% - 0.5rem);
-    }
-    /* product page ends  */
+  .lab-section-row {
+    display: flex;
+    flex-wrap: wrap;
   }
+
+  .lab-section-row .custom-left {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .lab-section-row .custom-right {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding-left: 2rem;
+  }
+
+  .product-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .product-items {
+    flex: 0 0 calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+  }
+  /* product page ends  */
+}
 .navbar-brand img {
   width: 120px;
   height: auto;
@@ -44,13 +44,18 @@
     margin-left: 25px;
   }
 }
+
+@media (max-width: 1400px) {
+
+}
+
 @media (max-width: 1200px) {
   #gallery-section {
-    .img-container2{
-    height: 270px !important;
+    .img-container2 {
+      height: 270px !important;
+    }
   }
-  }
-    .img-container {
+  .img-container {
     height: 190px !important;
     width: 100%;
   }
@@ -69,7 +74,18 @@
       text-align: left !important;
       max-width: 100% !important;
     }
-  }
+}#home-page {
+    & #home-banner {
+        & .carousel-slider {
+            & .text-content {
+                p {
+                    font-size: 16px !important;
+                }
+            }
+        }
+    }
+}
+  
   /* service page */
   .service-container .service-item {
     height: 350px;
@@ -97,17 +113,17 @@
     padding-right: 0 !important;
   }
 
-  #gallery-section{
-    .img-container2{
-      width:100%
+  #gallery-section {
+    .img-container2 {
+      width: 100%;
     }
   }
 
-#faq-section {
-  .faq-img-height {
-    height: 520px !important;
+  #faq-section {
+    .faq-img-height {
+      height: 520px !important;
+    }
   }
-}
   /* team  */
   .team-item {
     margin: auto;
@@ -121,13 +137,15 @@
     width: 100%;
     object-fit: cover;
   }
+
+  
 }
 @media (max-width: 767px) {
   #faq-section {
-  .faq-img-height {
-    height: 350px !important;
+    .faq-img-height {
+      height: 350px !important;
+    }
   }
-}
 }
 @media (max-width: 759px) {
   .navbar-brand img {
@@ -147,7 +165,7 @@
       }
     }
   }
- /* whyus section starts*/
+  /* whyus section starts*/
   .whyus-section .text-container {
     width: 100px;
   }
@@ -156,7 +174,7 @@
     flex-direction: column;
     padding: 1rem;
     max-height: 100vh; /* Prevents elongation beyond viewport height */
-    overflow-y: auto;  /* Allows scrolling if content is taller */
+    overflow-y: auto; /* Allows scrolling if content is taller */
   }
 
   .whyus-section .img-container {
@@ -200,8 +218,7 @@
   .accordion-item {
     margin-bottom: 0; /* no gap between accordion items */
   }
- /* whyus section ends  */
-   
+  /* whyus section ends  */
 }
 @media (max-width: 570px) {
   .whyus-section .section-container {
@@ -332,8 +349,6 @@
   .accordion-item {
     margin-bottom: 0;
   }
-
-
 }
 
 @media (max-width: 321px) {
@@ -343,7 +358,6 @@
 }
 
 #home-banner {
-
   @media (max-width: 759px) {
     .banner-padding {
       padding: 0 3rem !important;
@@ -383,11 +397,12 @@
   .service-container .service-item > div {
     padding: 10px !important;
   }
+  
 }
 
 @media (min-width: 990px) and (max-width: 1400px) {
   .service-container .service-item {
-    height: 360px !important;
+    height: 330px !important;
     padding: 10px !important;
   }
 
@@ -403,9 +418,9 @@
 
 @media (min-width: 767px) and (max-width: 991px) {
   .service-container .service-item {
-    height: 280px !important;
-    padding: 25px !important;
-  }
+        height: 333px !important;
+        padding: 15px !important;
+    }
 
   .service-container .service-item > div {
     padding: 1px !important;
@@ -418,7 +433,7 @@
 
 @media (min-width: 575px) and (max-width: 768px) {
   .service-container .service-item {
-    height: 380px !important;
+    height: 350px !important;
     padding: 10px !important;
   }
 
@@ -468,15 +483,18 @@
   }
 }
 
-
-
 @media (max-width: 470px) {
   .product-items {
     flex: 0 0 100% !important;
     max-width: 100% !important;
   }
 }
-
+@media (max-width: 575px) {
+.service-container .service-item {
+    height: 340px;
+    padding-top: 1px !important;
+  }
+}
 #team-page {
   @media (max-width: 426px) {
     .team-item {
@@ -521,5 +539,5 @@
     p {
       text-align: center;
     }
-  } 
+  }
 }
