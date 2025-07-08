@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useCurrentWeather from "../../hooks/useCurrentWeather";
 
 const Navbar = () => {
@@ -33,8 +33,8 @@ const Navbar = () => {
     >
       {/* Top bar */}
       <div className="site-top-navbar w-100 d-flex justify-content-between align-items-center text-nav">
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.com&su=Booking%20Request"
+        <Link
+          to="https://mail.google.com/mail/?view=cm&fs=1&to=info@aeirc.com&su=Booking%20Request"
           target="_blank"
           rel="noopener noreferrer"
           className="text-nav text-decoration-none d-flex align-items-center"
@@ -42,7 +42,7 @@ const Navbar = () => {
           {/* <h5>Email us at</h5> */}
           <i className="bi bi-envelope me-2"></i>
           <p>info@aeirc.com</p>
-        </a>
+        </Link>
 
         <div className="d-flex align-items-center gap-3">
           {/* Weather */}
@@ -56,22 +56,22 @@ const Navbar = () => {
               <span>{weather.temp}°C</span>
             </div>
           )}
-          <a
-            href="https://www.facebook.com/share/1Fg5keFa1e/"
+          <Link
+            to="https://www.facebook.com/share/1Fg5keFa1e/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-nav"
           >
             <i className="bi bi-facebook"></i>
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            to=""
             target="_blank"
             rel="noopener noreferrer"
             className="text-nav"
           >
             <i className="bi bi-linkedin"></i>
-          </a>
+          </Link>
         </div>
       </div>
 

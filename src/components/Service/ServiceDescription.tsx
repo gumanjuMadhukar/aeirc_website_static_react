@@ -1,3 +1,5 @@
+// import { Link } from "react-router-dom";
+
 const About = () => {
   return (
     <div>
@@ -50,9 +52,9 @@ const About = () => {
               </div>
 
               {/* Read More Button
-              <a className="btn btn-custom py-3 px-5 mt-2" href="/about">
+              <Link className="btn btn-custom py-3 px-5 mt-2" to="/about">
                 Read More
-              </a> */}
+              </Link> */}
             </div>
             <div
               className="col-lg-6 wow fadeInUp"
