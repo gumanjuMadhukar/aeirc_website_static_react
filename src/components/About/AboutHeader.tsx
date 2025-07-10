@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { fetchBannersByPage } from '../../api/banner';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { fetchBannersByPage } from "../../api/banner";
 
 interface Banner {
   id: number;
@@ -12,23 +12,37 @@ interface Banner {
 
 const ServiceHeader: React.FC = () => {
   const [bgImage, setBgImage] = useState<string | null>(null);
-  const fallbackImage = '/img/AEIRC_Gallery/gallery2.jpg';
+  const fallbackImage = "/img/AEIRC_Gallery/gallery2.jpg";
+
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getServiceBanner() {
       try {
-        const data = await fetchBannersByPage("services");
-        const banner: Banner = data.find((b: Banner) =>  b.page === 'about' && b.status === 'active');
+        const data = await fetchBannersByPage("about");
+        const banner: Banner = data.find(
+          (b: Banner) => b.page === "about" && b.status === "active"
+        );
 
         if (banner?.image) {
           const BASE_URL = import.meta.env.VITE_BASE_URL;
-          const fullImageUrl = banner.image.startsWith('/storage/')
+          const fullImageUrl = banner.image.startsWith("/storage/")
             ? `${BASE_URL}${banner.image}`
             : `${BASE_URL}/storage/${banner.image}`;
-          setBgImage(fullImageUrl);
+
+          // Preload image
+          const img = new Image();
+          img.src = fullImageUrl;
+          img.onload = () => {
+            setBgImage(fullImageUrl);
+            setLoading(false);
+          };
+        } else {
+          setLoading(false); // even if no image
         }
       } catch (error) {
-        console.error('Error fetching banner:', error);
+        console.error("Error fetching banner:", error);
+        setLoading(false);
       }
     }
 
@@ -39,25 +53,34 @@ const ServiceHeader: React.FC = () => {
     <div
       className="container-fluid bg-site-primary py-5 mb-5"
       style={{
-        backgroundImage: `linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)), url(${bgImage || fallbackImage})`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        backgroundImage: `linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)), url(${
+          loading ? fallbackImage : bgImage
+        })`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
     >
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-10 text-center">
-            <h1 className="display-3 text-white animated slideInDown">About Us</h1>
+            <h1 className="display-3 text-white animated slideInDown">
+              About Us
+            </h1>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb justify-content-center">
                 <li className="breadcrumb-item">
-                  <Link className="text-white" to="/">Home</Link>
+                  <Link className="text-white" to="/">
+                    Home
+                  </Link>
                 </li>
                 <li className="breadcrumb-item">
                   <span className="text-white">Pages</span>
                 </li>
-                <li className="breadcrumb-item text-white active" aria-current="page">
+                <li
+                  className="breadcrumb-item text-white active"
+                  aria-current="page"
+                >
                   About
                 </li>
               </ol>

@@ -34,7 +34,8 @@ export async function fetchBanners() {
 // Fetch banners filtered by page (e.g. "home", "service")
 export async function fetchBannersByPage(page = "service") {
   try {
-    const response = await api.get(`/banners?page=${page}`);
+    const response = await api.get(`/banners/page/${page}`);
+    
     return response.data;
   } catch (error) {
     const axiosError = error as AxiosError;

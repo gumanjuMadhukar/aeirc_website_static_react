@@ -7,26 +7,26 @@ const national = [
     src: "/img/Clients/national/HIBN.png",
     alt: "Health Insurance Board of Nepal",
   },
-  { src: "/img/Clients/national/Nepalinstitute.jpg", alt: "Nepalinstitute" },
+  { src: "/img/Clients/national/Nepalinstitute1.png", alt: "Nepalinstitute" },
   {
-    src: "/img/Clients/national/Clamphook .png",
+    src: "/img/Clients/national/Clamphook1.png",
     alt: "Clamphook Entrance Preparation",
   },
-  { src: "/img/Clients/national/NPC.png", alt: "Nepal Pharmacy Council" },
+  { src: "/img/Clients/national/NPC1.png", alt: "Nepal Pharmacy Council" },
 ];
 const international = [
   {
     src: "/img/Clients/international/BritishCouncil.png",
     alt: "British Council",
   },
-  { src: "/img/Clients/international/CG.png", alt: "City & Guilds (UK)" },
+  { src: "/img/Clients/international/CG1.png", alt: "City & Guilds (UK)" },
   {
-    src: "/img/Clients/international/CoreIntegra.png",
+    src: "/img/Clients/international/CoreIntegra1.png",
     alt: "Core Integra (India)",
   },
-  { src: "/img/Clients/international/jot.png", alt: "JOT (Japan)" },
+  { src: "/img/Clients/international/jot1.png", alt: "JOT (Japan)" },
   {
-    src: "/img/Clients/international/NTA.png",
+    src: "/img/Clients/international/NTA1.png",
     alt: "NTA (India) – JEE Main and JEE Advanced",
   },
   {
