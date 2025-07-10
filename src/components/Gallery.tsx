@@ -16,7 +16,7 @@ const Categories = () => {
             <div className="row g-3">
               <div className="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                 <a className="position-relative d-block overflow-hidden" href="#">
-                  <img className="img-fluid" src="public/img/AEIRC_Gallery/gallery1.jpg" alt="hall A" />
+                  <img className="img-fluid" src="/img/AEIRC_Gallery/gallery1.jpg" alt="hall A" />
                   <div
                     className="bg-white text-center text-highlight position-absolute bottom-0 end-0 py-2 px-3"
                     style={{ margin: '1px' }}
