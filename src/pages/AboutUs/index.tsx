@@ -5,9 +5,9 @@ import ServiceSection from "../../components/Service/ServiceSection";
 import About from "../../components/About/About";
 import TeamSection from "../../components/Team/TeamSection";
 // import WhyUs from "../../components/WhyUs";
-import PartnersSection from "../../components/PartnersSection";
-import SmarterAccordion from "../../components/FaqSection";
-import WhyChooseUs from "../../components/WhyChooseUs";
+import PartnersSection from "../../components/Partners/PartnersSection";
+import SmarterAccordion from "../../components/Faq/FaqSection";
+import WhyChooseUs from "../../components/Whyus/WhyChooseUs";
 
 const AboutUs = () => {
   const location = useLocation();

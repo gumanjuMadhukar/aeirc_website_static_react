@@ -10,8 +10,8 @@ import NotFoundPage from "./pages/NotFoundPage";
 import ContactPage from "./pages/ContactPage";
 import ServicePage from "./pages/ServicePage";
 import Details from "./pages/ServicePage/Detail";
-import ScrollToTopButton from "./components/ScrollToTopButton";
-import FooterSection from "./components/FooterSection";
+import ScrollToTopButton from "./components/Scroll/ScrollToTopButton";
+import FooterSection from "./components/Footer/FooterSection";
 
 
 import "bootstrap/dist/css/bootstrap.min.css";

@@ -2,14 +2,14 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import HomeBanner from "../../components/Banner/homeBanner";
 import ServiceSection from "../../components/Service/ServiceSection";
-import Categories from "../../components/Gallery";
+import Categories from "../../components/Gallery/Gallery";
 import ProductSection from "../../components/Product/ProductSection";
 // import TestimonialSection from "../../components/TestimonialComponent/TestimonialSection";
 // import WhyUs from "../../components/WhyUs";
-import PartnersSection from "../../components/PartnersSection";
-import WeatherCard from "../../components/WeatherCard";
-import SmarterAccordion from "../../components/FaqSection";
-import WhyChooseUS from "../../components/WhyChooseUs";
+import PartnersSection from "../../components/Partners/PartnersSection";
+import WeatherCard from "../../components/Weather/WeatherCard";
+import SmarterAccordion from "../../components/Faq/FaqSection";
+import WhyChooseUS from "../../components/Whyus/WhyChooseUs";
 
 const Home = () => {
   const location = useLocation();
