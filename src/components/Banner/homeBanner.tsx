@@ -32,13 +32,12 @@ const slides: Slide[] = [
     buttonLink: "/courses",
   },
  {
-  src: "/img/whatsapp/HR_Office.jpg", 
-  // src: "/img/whatsapp/HR.jpg", 
+  src: "/img/whatsapp/Aeirc_lobby.jpg", 
   alt: "HR Office",
   caption: "Our Office Space",
   description:
-    "A glimpse into our modern office where innovation and collaboration meet. Meet our HR in action.",
-  buttonText: "Meet Our Team",
+    "A glimpse into our modern office where innovation and collaboration meet.",
+  buttonText: "Take a look at our lobby",
   buttonLink: "/about",
 },
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const FooterSection: React.FC = () => {
+const FooterSection: React.FC<{ onTermsClick: () => void }> = ({ onTermsClick }) => {
   return (
     <div
       id="footer-page"
@@ -41,12 +41,21 @@ const FooterSection: React.FC = () => {
             <Link className="btn btn-link" to="products">
              Products
             </Link>
-            <Link className="btn btn-link" to="#">
+            <Link className="btn btn-link" to="news">
+             News
+            </Link>
+            <Link className="btn btn-link" to="privacyPolicy">
               Privacy Policy
             </Link>
-            <Link className="btn btn-link" to="#">
+            
+            {/* ✅ Use a <button> instead of <Link> for modal */}
+            <button
+              className="btn btn-link"
+              onClick={onTermsClick}
+              style={{ background: "none", border: "none", cursor: "pointer", textDecoration: "none",}}
+            >
               Terms & Condition
-            </Link>
+            </button>
             {/* <Link className="btn btn-link" to="#">
               FAQs & Help
             </Link> */}
@@ -76,9 +85,9 @@ const FooterSection: React.FC = () => {
             </p>
 
             <div className="d-flex pt-2">
-              <Link className="btn btn-outline-light btn-social" to="#">
+              {/* <Link className="btn btn-outline-light btn-social" to="#">
                 <i className="fab fa-twitter"></i>
-              </Link>
+              </Link> */}
               <Link
                 className="btn btn-outline-light btn-social"
                 to="https://www.facebook.com/share/1Fg5keFa1e/"
@@ -86,9 +95,9 @@ const FooterSection: React.FC = () => {
               >
                 <i className="fab fa-facebook-f"></i>
               </Link>
-              <Link className="btn btn-outline-light btn-social" to="#">
+              {/* <Link className="btn btn-outline-light btn-social" to="#">
                 <i className="fab fa-youtube"></i>
-              </Link>
+              </Link> */}
               <Link
                 className="btn btn-outline-light btn-social"
                 to="https://www.linkedin.com/company/aeirc-tech/?originalSubdomain=np"
@@ -98,53 +107,8 @@ const FooterSection: React.FC = () => {
               </Link>
             </div>
           </div>
-          {/* <div className="col-lg-4 col-md-6">
-            <h4 className="text-dark mb-3">Gallery</h4>
-            <div className="row g-2 pt-2">
-              {[1, 2, 3, 2, 3, 1].map((img, index) => (
-                <div className="col-4" key={index}>
-                  <img
-                    className="img-fluid bg-light p-1"
-                    src={`img/course-${img}.jpg`}
-                    alt="Gallery"
-                  />
-                </div>
-              ))}
-            </div>
-          </div> */}
         </div>
       </div>
-      {/* <div className="container">
-        <div className="copyright">
-          <div className="row">
-            <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy;{" "}
-              <Link className="border-bottom" to="#">
-                Your Site Name
-              </Link>
-              , All Right Reserved.
-              <br />
-              Designed By{" "}
-              <Link className="border-bottom" to="https://htmlcodex.com">
-                HTML Codex
-              </Link>
-              <br />
-              Distributed By{" "}
-              <Link className="border-bottom" to="https://themewagon.com">
-                ThemeWagon
-              </Link>
-            </div>
-            <div className="col-md-6 text-center text-md-end">
-              <div className="footer-menu">
-                <Link to="#">Home</Link>
-                <Link to="#">Cookies</Link>
-                <Link to="#">Help</Link>
-                <Link to="#">FAQs</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

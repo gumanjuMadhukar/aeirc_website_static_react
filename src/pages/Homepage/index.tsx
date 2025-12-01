@@ -6,10 +6,11 @@ import Categories from "../../components/Gallery/Gallery";
 import ProductSection from "../../components/Product/ProductSection";
 // import TestimonialSection from "../../components/TestimonialComponent/TestimonialSection";
 // import WhyUs from "../../components/WhyUs";
-import PartnersSection from "../../components/Partners/PartnersSection";
+import PartnersSection from "../../components/Clients/ClientsSection";
 import WeatherCard from "../../components/Weather/WeatherCard";
 import SmarterAccordion from "../../components/Faq/FaqSection";
 import WhyChooseUS from "../../components/Whyus/WhyChooseUs";
+import VideoSection from "../../components/Video/Video";
 
 const Home = () => {
   const location = useLocation();
@@ -33,11 +34,12 @@ const Home = () => {
         <ServiceSection />
       </div>
       <WhyChooseUS />
-      <SmarterAccordion />
       {/* <WhyUs /> */}
+      <VideoSection/>
       <ProductSection />
-      <Categories />
+      <SmarterAccordion />
       <PartnersSection />
+      <Categories />
       {/* <TestimonialSection /> */}
       <WeatherCard />
       {/* <ScrollToTopButton/> */}

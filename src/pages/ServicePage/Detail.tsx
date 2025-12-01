@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { services } from "./servicesData";
+import { services } from "../../data/servicesData";
 import ServiceHeader from "../../components/Service/ServiceHeader";
 
 const Details = () => {
@@ -15,17 +15,17 @@ const Details = () => {
 
   const service = services.find((s) => s.id === id);
 
-useEffect(() => {
-  const timeout = setTimeout(() => {
-    const detailSection = document.getElementById("detail-page");
-    if (detailSection) {
-      detailSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, 100);
-  return () => clearTimeout(timeout);
-}, [id]);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      const detailSection = document.getElementById("detail-page");
+      if (detailSection) {
+        detailSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }, 100);
+    return () => clearTimeout(timeout);
+  }, [id]);
 
   if (!service) {
     return (

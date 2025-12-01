@@ -21,18 +21,34 @@
 .bg-whyus-blue {
   background-color: #e9f1fc !important;
 }
+.bg-custom{
+  background-color: var(--light);
+}
 .btn-custom {
   background-color: var(--secondary) !important;
   color: #ffffff;
   border: none;
   /* transition: all 0.3s ease !important; */
 }
+
 .btn-custom:hover {
   background-color: #e9f1fc !important;
   color: var(--secondary) !important;
 }
 .btn-custom:hover i {
   color: #375b8b !important;
+}
+.btn-outline-custom {
+  background-color: #fff !important;
+  color: var(--secondary) !important;
+  border: 2px solid var(--secondary) !important;
+  /* Optional hover effect */
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-custom:hover {
+  background-color: var(--secondary) !important;
+  color: #ffffff !important;
 }
 .service-bg {
   background-color: #e9f1fc !important;
@@ -489,12 +505,10 @@ button:hover {
 
 .service-item:hover * {
   color: var(--light) !important;
-  
 }
 .service-item:hover .btn-custom {
-  background-color:white !important;
+  background-color: white !important;
   color: var(--secondary) !important;
-
 }
 .text-sm.line-clamp-3 {
   display: -webkit-box;
@@ -503,8 +517,13 @@ button:hover {
   overflow: hidden;
   /* height: 80px; */
 }
-.service-title{
+.service-title {
   height: 50px;
+}
+/*** Video ***/
+.video-box{
+  height: 350px;
+  width: auto;
 }
 
 /*** gallery ***/
@@ -518,15 +537,28 @@ button:hover {
   .course-item:hover img {
     transform: scale(1.1);
   }
-  .img-container2{
+  .img-container2 {
     height: 350px !important;
   }
 }
-/* client */
-#client-section{
+/*** client ***/
+#client-section {
   background: var(--light) !important;
 }
-#whyus-section{
+.hover-effect:hover {
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.text-truncate {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#whyus-section {
   background: var(--light) !important;
 }
 /*** Team ***/
@@ -674,6 +706,58 @@ button:hover {
   user-select: none;
 }
 
+/*** Privacy Policy***/
+.container{
+    overflow: visible !important; /* This is what you want */
+}
+.row {
+  overflow: visible !important;
+}
+.col-lg-4 {
+  overflow: visible !important;
+}
+
+.privacy-sidebar {
+  padding-top: 28px;
+  height: fit-content;
+  background: var(--light) !important;
+  position: sticky;
+  padding: 1rem;
+  top: 120px !important;
+  z-index: 10;
+}
+.privacy-content-container {
+  overflow: visible !important;
+}
+
+
+.scroll-offset {
+  scroll-margin-top: 112px; /* or whatever space you want */
+}
+
+.privacy-content-container {
+  padding-left: 70px;
+  /* padding-top: 20px; */
+}
+
+/*** News Section ***/
+.news-card {
+  border-left: 5px solid #0082be;
+  transition: transform 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #0082be; /* your preferred bg color */
+  border-color: #ffffff; /* your preferred border color */
+  color: white; /* text color */
+}
+
+
+
 /*** ScrollToTopButton ***/
 .scroll-to-top-btn {
   bottom: 80px;
@@ -739,8 +823,8 @@ button:hover {
   color: #1246b8 !important;
 }
 .footer a {
-    color: var(--secondary) !important;
-  }
+  color: var(--secondary) !important;
+}
 .footer .copyright {
   padding: 25px 0;
   font-size: 15px;
@@ -777,7 +861,7 @@ button:hover {
 
 .service-container {
   .service-item {
-    height: 350px;
+    height: 320px;
   }
 }
 .product-items:hover .card-img-top {

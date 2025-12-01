@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { services } from "../../pages/ServicePage/servicesData";
+import { services } from "../../data/servicesData";
 
 const ServiceSection = () => {
   const location = useLocation();

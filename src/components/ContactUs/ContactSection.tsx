@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 type ContactInfoItem = {
   iconClass: string;
@@ -12,20 +13,33 @@ const contactInfo: ContactInfoItem[] = [
     title: "Office",
     text: "Babarmal, Kathmandu",
   },
+];
+
+type PersonContact = {
+  name: string;
+  position: string;
+  phone: string;
+  email: string;
+};
+
+const teamContacts: PersonContact[] = [
   {
-    iconClass: "fas fa-phone-alt",
-    title: "Mobile",
-    text: "9851046500",
+    name: "Mr. Vikas Bhusal ",
+    position: "Chief Executive Officer",
+    phone: "+977 9851046500",
+    email: "mail@vikas.com.np ",
   },
   {
-    iconClass: "fas fa-envelope-open",
-    title: "Email",
-    text: "info@aeirc.com",
+    name: "Mr. Bijay Shrestha ",
+    position: "Director, IT Department",
+    phone: "+977 984-9850871",
+    email: "it.director@aeirc.com",
   },
+
 ];
 
 const generateCaptcha = () => {
-  const characters = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  const characters = "ABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
   let result = "";
   for (let i = 0; i < 5; i++) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -95,6 +109,7 @@ const ContactSection: React.FC = () => {
         setStatusMessage(`Error: ${text}`);
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setStatusMessage("Failed to send message. Please try again later.");
     } finally {
       setIsSending(false);
@@ -110,13 +125,92 @@ const ContactSection: React.FC = () => {
           </h6>
           <h1 className="mb-5">Contact For Any Query</h1>
         </div>
+
         <div className="row g-4 contact-row">
-          {/* Contact Info */}
+          {/* Team Contacts only - Left column */}
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <h5>Get In Touch</h5>
-            <p className="mb-4">The contact form is now active.</p>
+            {/* <h5>Department Contacts</h5> */}
+            <div
+              className="d-flex flex-column bg-gradient rounded-4 mb-5 "
+              style={{
+                background: "linear-gradient(135deg, #e0f7fa 0%, #80deea 100%)",
+              }}
+            >
+              {/* Info Section */}
+              <div className="d-flex align-items-start mb-4">
+                <div
+                  className="me-3"
+                  style={{
+                    fontSize: "2.5rem",
+                    color: "#0082be",
+                    lineHeight: 1,
+                  }}
+                  aria-hidden="true"
+                >
+                  <i className="fas fa-info-circle"></i>
+                </div>
+                <div
+                  style={{
+                    color: "#0082be",
+                    fontWeight: 600,
+                    fontSize: "1rem",
+                    lineHeight: 1.4,
+                  }}
+                >
+                  Need assistance? <br />
+                  Our expert department heads are ready to help you with any
+                  questions or support you need. Reach out to them directly
+                  below.
+                </div>
+              </div>
+
+              {/* Contacts Section */}
+              <div className="row">
+                {teamContacts.map((person, index) => (
+                  <div className="col-lg-12 mb-3" key={index}>
+                    <div
+                      className="p-3 h-100 bg-white rounded shadow-sm"
+                      style={{
+                        borderLeft: "5px solid #0082be",
+                      }}
+                    >
+                      <h5 className="mb-1 text-dark ">{person.name}</h5>
+                      <p className="mb-1 text-muted">{person.position}</p>
+                      <p className="mb-1 text-muted">
+                        <i className="fas fa-phone me-2 text-secondary"></i>
+                        {person.phone}
+                      </p>
+                      <p className="mb-0">
+                        <i className="fas fa-envelope me-2 text-secondary"></i>
+                        <span className="custom-tooltip-wrapper">
+                          <Link
+                            to="https://mail.google.com/mail/?view=cm&fs=1&to={person.email}.com&su=Booking%20Request"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-dark text-decoration-none d-flex align-items-center"
+                          >
+                            {person.email}
+                          </Link>
+                          <span className="custom-tooltip-text">
+                            Email us for booking
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Office Address + Google Maps - Middle column */}
+          <div
+            className="col-lg-4 col-md-6 g-4 wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
+            {/* Office Address */}
             {contactInfo.map(({ iconClass, title, text }) => (
-              <div className="d-flex align-items-center mb-3" key={title}>
+              <div className="d-flex align-items-center mb-4" key={title}>
                 <div
                   className="d-flex align-items-center justify-content-center flex-shrink-0 bg-site-primary"
                   style={{ width: "50px", height: "50px" }}
@@ -125,37 +219,16 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div className="ms-3">
                   <h5 className="text-black">{title}</h5>
-                  {title === "Email" ? (
-                    <div className="custom-tooltip-wrapper">
-                      <a
-                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=${text}&su=Booking%20Request`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-decoration-none d-flex align-items-center text-black"
-                      >
-                        <span>{text}</span>
-                      </a>
-                      <span className="custom-tooltip-text">
-                        Email us for booking
-                      </span>
-                    </div>
-                  ) : (
-                    <p className="mb-0">{text}</p>
-                  )}
+                  <p className="mb-0">{text}</p>
                 </div>
               </div>
             ))}
-          </div>
 
-          {/* Google Maps */}
-          <div
-            className="col-lg-4 col-md-6 g-4 map wow fadeInUp"
-            data-wow-delay="0.3s"
-          >
+            {/* Google Maps */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.85604596331!2d85.32434121132162!3d27.690843776092727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19cfc621cdf5%3A0xf81f589e0bfe1f46!2sAdvance%20Education%20%26%20Innovative%20Research%20Center%20(AEIRC)!5e0!3m2!1sen!2snp!4v1749118691909!5m2!1sen!2snp"
               width="100%"
-              height="450"
+              height="400"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
