@@ -56,7 +56,7 @@ export const instructors = [
   },
   {
     name: "Mr. Dibash Bhattarai ",
-    designation: "Accountant",
+    designation: "Accountant,",
     description: "Description",
     image: "/img/Team/dummy.jpg",
     facebook: "#",
